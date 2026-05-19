@@ -127,6 +127,7 @@
   .marquee { mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
   @keyframes scroll-x { to { transform: translateX(-50%); } }
   .scroll-x { animation: scroll-x 50s linear infinite; }
+  @media (max-width: 1023px) { .scroll-x { animation-duration: 22s; } }
   @keyframes scroll-x-rev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
   .scroll-x-rev { animation: scroll-x-rev 60s linear infinite; }
 
@@ -438,6 +439,34 @@
         Disponible para contratos · Mayo 2026
       </div>
         <span class="hidden sm:inline-flex text-[10px] tracking-[0.25em] uppercase text-fg-3">Antofagasta, Chile · 44 años · nacido en 1982</span>
+    </div>
+
+    <!-- Profile photo · mobile only -->
+    <div class="lg:hidden flex justify-center mb-8 reveal">
+      <div class="relative overflow-hidden rounded-md group" style="width:clamp(140px,42vw,200px);aspect-ratio:3/4;box-shadow:0 20px 50px -16px rgba(0,0,0,0.65),0 0 0 1px var(--line2);">
+        <img src="profile.png" alt="Yamir Moisés Rojo Andrade en operación · Salar de Atacama" loading="eager" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 22%;" />
+        <div class="absolute inset-x-0 bottom-0 pointer-events-none" style="height:62%;background:linear-gradient(to top,rgba(15,22,40,0.96) 0%,rgba(15,22,40,0.55) 38%,transparent 100%);"></div>
+        <div class="absolute inset-x-0 top-0 pointer-events-none" style="height:24%;background:linear-gradient(to bottom,rgba(15,22,40,0.55),transparent);"></div>
+        <div class="absolute top-2 right-2 pointer-events-none">
+          <span class="block w-4 h-px bg-amber"></span>
+          <span class="block w-px h-4 bg-amber absolute top-0 right-0"></span>
+        </div>
+        <div class="absolute bottom-2 left-2 pointer-events-none">
+          <span class="block w-4 h-px bg-amber absolute bottom-0 left-0"></span>
+          <span class="block w-px h-4 bg-amber"></span>
+        </div>
+        <div class="absolute top-2.5 left-2.5 flex items-center gap-1 pointer-events-none">
+          <span class="w-1.5 h-1.5 rounded-full bg-mint available-dot"></span>
+          <span class="text-[7px] tracking-[0.28em] uppercase text-fg font-medium" style="text-shadow:0 1px 6px rgba(0,0,0,0.85);">En operación</span>
+        </div>
+        <div class="absolute bottom-2.5 left-2.5 right-2.5 pointer-events-none">
+          <div class="text-[7px] tracking-[0.24em] uppercase text-amber font-semibold">Líder Operaciones</div>
+          <div class="display text-[13px] leading-tight text-fg mt-1">Yamir M. Rojo</div>
+          <div class="flex items-center gap-1.5 mt-1.5 text-[7px] tracking-[0.18em] uppercase text-fg-2">
+            <span>SQM</span><span class="w-1 h-1 rounded-full bg-amber"></span><span>Atacama</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <h1 class="display leading-[0.85] tracking-tight">
