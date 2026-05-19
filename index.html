@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0c" />
+<title>Yamir Moisés Rojo Andrade — Portafolio Profesional · Operaciones, Logística Minera y Supply Chain</title>
+<meta name="description" content="Portafolio profesional de Yamir Moisés Rojo Andrade: Gerencia de Operaciones, Logística Minera, Supply Chain y Seguridad Operacional para empresas y reclutantes." />
+<link rel="icon" type="image/png" href="favicon.png?v=3" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg:     { DEFAULT:'#181a20', soft:'#20232b', card:'#272b35', hi:'#343946' },
+          line:   'rgba(255,255,255,0.08)',
+          line2:  'rgba(255,255,255,0.14)',
+          fg:     { DEFAULT:'#fafaf7', 2:'#c5c5b8', 3:'#7a7a6e', 4:'#4a4a44' },
+          amber:  { DEFAULT:'#ff7849', soft:'#ff9669', deep:'#e0561f', glow:'rgba(255,120,73,0.35)', tint:'rgba(255,120,73,0.10)' },
+          gold:   '#d4af37',
+          mint:   '#5eead4'
+        },
+        fontFamily: {
+          display: ['"Hoefler Text"','"PP Editorial New"','"Cormorant Garamond"','Garamond','Georgia','serif'],
+          sans:    ['"Inter"','-apple-system','"Segoe UI"','Roboto','sans-serif'],
+          mono:    ['"JetBrains Mono"','"SF Mono"','Menlo','Consolas','monospace']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --bg: #181a20;
+    --bg-soft: #20232b;
+    --bg-card: #272b35;
+    --bg-hi: #343946;
+    --fg: #fafaf7;
+    --fg-2: #c5c5b8;
+    --fg-3: #7a7a6e;
+    --line: rgba(255,255,255,0.08);
+    --line2: rgba(255,255,255,0.14);
+    --amber: #ff7849;
+    --amber-soft: #ff9669;
+    --amber-deep: #e0561f;
+    --amber-glow: rgba(255,120,73,0.35);
+    --amber-tint: rgba(255,120,73,0.10);
+    --cursor-fill: #ffffff;
+    --cursor-stroke: #000000;
+    --cursor-label: #000000;
+    --cursor-trail: rgba(255,255,255,0.5);
+    --star: rgba(255,255,255,0.96);
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    cursor: none;
+    overflow-x: hidden;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  @media (hover: none), (pointer: coarse) { body { cursor: auto; } #cursor, #cursor-trail { display: none !important; } }
+
+  .mesh {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.82;
+    background:
+      radial-gradient(ellipse 60% 50% at 15% 20%, rgba(255,120,73,0.20), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 85% 80%, rgba(94,234,212,0.13), transparent 60%),
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,120,73,0.12), transparent 60%),
+      radial-gradient(ellipse 65% 45% at 70% 25%, rgba(255,255,255,0.07), transparent 65%);
+  }
+  .stellar {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 1;
+    background-image:
+      radial-gradient(1.7px 1.7px at 12% 18%, var(--star), transparent 72%),
+      radial-gradient(1.45px 1.45px at 26% 78%, var(--star), transparent 72%),
+      radial-gradient(2.1px 2.1px at 52% 34%, var(--star), transparent 72%),
+      radial-gradient(1.55px 1.55px at 76% 64%, var(--star), transparent 72%),
+      radial-gradient(2.6px 2.6px at 88% 16%, var(--star), transparent 72%),
+      radial-gradient(1.2px 1.2px at 38% 22%, rgba(255,255,255,0.9), transparent 72%),
+      radial-gradient(1.35px 1.35px at 64% 82%, rgba(255,255,255,0.94), transparent 72%),
+      radial-gradient(1.9px 1.9px at 92% 58%, rgba(255,255,255,0.86), transparent 72%),
+      radial-gradient(1.1px 1.1px at 7% 62%, rgba(255,255,255,0.82), transparent 72%);
+    background-size: 180px 180px, 230px 230px, 310px 310px, 270px 270px, 390px 390px, 150px 150px, 210px 210px, 260px 260px, 170px 170px;
+    animation: stellarDrift 58s linear infinite;
+  }
+  @keyframes stellarDrift {
+    from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+    to { background-position: 180px -180px, -230px -230px, 310px -310px, -270px -270px, 390px -390px, -150px -150px, 210px -210px, -260px -260px, 170px -170px; }
+  }
+  .grain::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode: overlay; opacity: 0.6;
+  }
+
+  #loader { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; align-items: center; justify-content: center; transition: opacity .6s ease, transform .6s ease; }
+  #loader.gone { opacity: 0; pointer-events: none; transform: translateY(-2%); }
+
+  #cursor { position: fixed; top:0; left:0; width: 14px; height: 14px; background: var(--cursor-fill); border: 2px solid var(--cursor-stroke); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width .25s cubic-bezier(.2,.7,.2,1), height .25s cubic-bezier(.2,.7,.2,1), background-color .25s, border-color .25s, border-radius .25s, opacity .25s; mix-blend-mode: normal; box-shadow: 0 0 0 1px var(--cursor-fill), 0 8px 24px rgba(0,0,0,0.25); }
+  #cursor.lg { width: 78px; height: 78px; background: transparent; border-color: var(--cursor-fill); box-shadow: inset 0 0 0 1px var(--cursor-stroke), 0 8px 24px rgba(0,0,0,0.22); }
+  #cursor.drag { width: 104px; height: 104px; background: var(--cursor-fill); border-color: var(--cursor-stroke); }
+  #cursor.drag::before { content:"↔"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color: var(--cursor-label); font-family:Inter,sans-serif; font-size:28px; font-weight:800; }
+  #cursor-trail { position: fixed; top:0; left:0; width: 42px; height: 42px; border: 1px solid var(--cursor-trail); border-radius: 50%; pointer-events: none; z-index: 9997; transform: translate(-50%,-50%); opacity: 0.55; }
+
+  .display { font-family: 'Hoefler Text','PP Editorial New','Cormorant Garamond',Garamond,Georgia,serif; font-feature-settings: "liga" 1, "kern" 1, "swsh" 1, "ss01" 1; }
+  .italic-d { font-style: italic; }
+  .num { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal[data-d="1"] { transition-delay: .08s; }
+  .reveal[data-d="2"] { transition-delay: .16s; }
+  .reveal[data-d="3"] { transition-delay: .24s; }
+  .reveal[data-d="4"] { transition-delay: .32s; }
+  .reveal[data-d="5"] { transition-delay: .40s; }
+
+  .lr span { display: inline-block; opacity: 0; transform: translateY(80%) rotate(8deg); transition: opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1); }
+  .lr.in span { opacity: 1; transform: none; }
+
+  .ul-grow { background-image: linear-gradient(var(--amber), var(--amber)); background-position: 0 100%; background-repeat: no-repeat; background-size: 0% 2px; transition: background-size .5s cubic-bezier(.2,.7,.2,1); padding-bottom: 2px; }
+  .ul-grow:hover { background-size: 100% 2px; }
+
+  .marquee { mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+  @keyframes scroll-x { to { transform: translateX(-50%); } }
+  .scroll-x { animation: scroll-x 50s linear infinite; }
+  @keyframes scroll-x-rev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .scroll-x-rev { animation: scroll-x-rev 60s linear infinite; }
+
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  .spin-slow { animation: spin-slow 40s linear infinite; transform-origin: 50% 50%; }
+
+  .glass { background: rgba(24,26,32,0.28); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.10); }
+  .glass:hover { border-color: var(--line2); }
+  .bg-bg, .bg-bg-soft, .bg-bg-card { background-color: rgba(24,26,32,0.18) !important; }
+
+  .tilt { transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s; transform-style: preserve-3d; }
+
+  .lift { transition: transform .5s cubic-bezier(.2,.7,.2,1), background-color .35s, border-color .35s; }
+  .lift:hover { transform: translateY(-4px); border-color: var(--line2); }
+
+  .magnetic { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.18); transition: all .35s; }
+  .dot.active { background: var(--amber); width: 28px; border-radius: 3px; box-shadow: 0 0 12px var(--amber-glow); }
+
+  #casesTrack { scroll-snap-type: x proximity; scroll-padding-inline: 2.5rem; -webkit-overflow-scrolling: touch; }
+  #casesTrack > .case { scroll-snap-align: start; }
+  #casesTrack .case { border-color: var(--case-border, rgba(255,255,255,0.10)) !important; box-shadow: inset 0 0 0 1px var(--case-glow, transparent); }
+  #casesTrack .case:nth-of-type(1) { --case-border: rgba(255,120,73,0.38); --case-glow: rgba(255,120,73,0.08); }
+  #casesTrack .case:nth-of-type(2) { --case-border: rgba(94,234,212,0.30); --case-glow: rgba(94,234,212,0.07); }
+  #casesTrack .case:nth-of-type(3) { --case-border: rgba(125,211,252,0.30); --case-glow: rgba(125,211,252,0.07); }
+  #casesTrack .case:nth-of-type(4) { --case-border: rgba(255,209,102,0.32); --case-glow: rgba(255,209,102,0.07); }
+  #casesTrack .case:nth-of-type(5) { --case-border: rgba(244,114,182,0.28); --case-glow: rgba(244,114,182,0.06); }
+  #casesTrack .case:nth-of-type(6) { --case-border: rgba(132,204,22,0.28); --case-glow: rgba(132,204,22,0.06); }
+  #casesTrack .case:nth-of-type(7) { --case-border: rgba(167,139,250,0.30); --case-glow: rgba(167,139,250,0.07); }
+  #casesTrack .case:nth-of-type(8) { --case-border: rgba(45,212,191,0.30); --case-glow: rgba(45,212,191,0.07); }
+  [class*="tracking-[0.25em]"][class*="uppercase"][class*="text-amber"] { font-size: 13px; letter-spacing: .2em; line-height: 1.45; }
+  .case-period { font-size: 13px; letter-spacing: .2em; line-height: 1.45; }
+  #casesTrack::-webkit-scrollbar { height: 4px; }
+  #casesTrack::-webkit-scrollbar-track { background: transparent; }
+  #casesTrack::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
+  .case-slider { appearance: none; width: min(560px, 100%); height: 6px; border-radius: 999px; background: rgba(255,255,255,0.12); outline: none; }
+  .case-slider::-webkit-slider-thumb { appearance: none; width: 22px; height: 22px; border-radius: 999px; background: var(--amber); border: 4px solid var(--bg); box-shadow: 0 0 0 1px var(--amber), 0 0 22px var(--amber-glow); cursor: pointer; }
+  .case-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 999px; background: var(--amber); border: 4px solid var(--bg); box-shadow: 0 0 0 1px var(--amber), 0 0 22px var(--amber-glow); cursor: pointer; }
+
+  .mark { position: relative; display: inline-block; padding: 0 0.15em; }
+  .mark::before { content:""; position:absolute; left:0; right:0; top:0.6em; bottom:0; background: var(--amber-tint); transform: skewY(-1deg); border-radius: 1px; z-index:-1; }
+
+  .ticker { font-variant-numeric: tabular-nums; letter-spacing: -0.04em; }
+
+  .service { position: relative; transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .35s; }
+  .service::before { content:""; position:absolute; inset:-1px; border-radius: inherit; background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%), var(--amber-tint), transparent 40%); opacity: 0; transition: opacity .4s; pointer-events:none; }
+  .service:hover::before { opacity: 1; }
+  .service:hover { transform: translateY(-4px); border-color: var(--amber); }
+
+  .step-num { font-family: 'Hoefler Text', serif; font-style: italic; }
+
+  details.faq { border-bottom: 1px solid var(--line); }
+  details.faq summary { list-style: none; cursor: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary .plus { transition: transform .35s; }
+  details[open].faq summary .plus { transform: rotate(45deg); }
+  details.faq .answer { padding: 0 0 24px 0; color: var(--fg-2); }
+
+  .stat-num { background: linear-gradient(180deg, #ffffff 0%, var(--amber-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .metric-panel { background: rgba(8,9,12,0.72) !important; }
+  .metric-panel > div { background: rgba(8,9,12,0.66) !important; }
+
+  ::selection { background: var(--amber); color: var(--bg); }
+
+  #scrollFill { transform-origin: left center; transform: scaleX(0); }
+
+  @keyframes available { 0%,100% { box-shadow: 0 0 0 0 rgba(94,234,212,0.6) } 50% { box-shadow: 0 0 0 8px rgba(94,234,212,0) } }
+  .available-dot { animation: available 2.2s infinite; }
+
+  .hex { clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+
+  .edu-timeline { position: relative; }
+  .edu-timeline::before { content:""; position:absolute; left: 1.15rem; top:0; bottom:0; width:1px; background: var(--line2); }
+  .edu-item { position: relative; padding-left: 3.25rem; }
+  .edu-item::before { content:""; position:absolute; left:.8rem; top:.45rem; width:.75rem; height:.75rem; border-radius:999px; background:var(--amber); box-shadow:0 0 0 8px var(--amber-tint); }
+  .gold-star { color:#ffd166; filter: drop-shadow(0 0 16px rgba(255,209,102,.45)); }
+  .distinction-line { display: inline-flex; align-items: center; gap: .65rem; margin-top: .8rem; color: #ffd166; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .distinction-line .gold-star { font-size: 1.55rem; line-height: 1; }
+  .industry-card { background: rgba(255,255,255,0.025); border: 1px solid var(--line); }
+  .industry-card svg { width: 72px; height: 72px; margin: auto; opacity:.95; filter: drop-shadow(0 0 20px var(--amber-glow)); }
+  .industry-card > div:first-child { flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 8rem; }
+  .industry-card > div:first-child span { align-self: flex-start; }
+
+  .glow-amber { text-shadow: 0 0 30px var(--amber-glow); }
+
+  .sn { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); display: inline-flex; align-items: center; gap: 8px; }
+  .sn::before { content:""; width: 24px; height: 1px; background: var(--amber); }
+
+  @keyframes dash-draw { to { stroke-dashoffset: 0 } }
+
+  .no-bar::-webkit-scrollbar { display: none; }
+  .no-bar { scrollbar-width: none; }
+
+  .sh-num { font-family: 'Hoefler Text', serif; font-style: italic; color: var(--fg-4); }
+
+
+  @media (max-width: 768px) {
+    section { scroll-margin-top: 72px; }
+    .glass { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+    .case { width: min(88vw, 460px); }
+    .case { padding: 1.5rem; }
+    .case h3 { overflow-wrap: anywhere; }
+    .copy-label, .break-all { overflow-wrap: anywhere; }
+    .sn { letter-spacing: 0.18em; }
+    #casesTrack { padding-inline: 1.25rem; }
+    object[type="application/pdf"] { min-height: 520px; }
+  }
+
+  @media (max-width: 480px) {
+    nav .glass { height: auto; min-height: 56px; border-radius: 24px; padding: 0.5rem; }
+    .display.text-6xl { font-size: 3rem !important; }
+    .display.text-5xl { font-size: 2.65rem !important; }
+    .text-\[120px\] { font-size: 5.4rem !important; }
+    .text-\[14vw\] { font-size: clamp(2.85rem, 13vw, 4rem) !important; }
+    .grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .grid.grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  }
+</style>
+</head>
+<body class="font-sans relative grain">
+
+<div id="loader">
+  <div class="text-center">
+    <div class="hex w-16 h-16 bg-amber mx-auto flex items-center justify-center"><span class="display text-bg text-2xl font-bold">YR</span></div>
+    <div class="display italic-d text-fg mt-5 text-xl">Yamir Moisés Rojo Andrade</div>
+    <div class="text-[10px] tracking-[0.3em] uppercase text-fg-3 mt-1">Cargando portafolio...</div>
+  </div>
+</div>
+
+<div class="mesh"></div>
+<div class="stellar"></div>
+
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+
+<div class="fixed top-0 inset-x-0 h-px bg-line z-[80]">
+  <div id="scrollFill" class="h-full bg-amber w-full"></div>
+</div>
+
+<nav class="fixed top-3 inset-x-3 lg:top-5 lg:inset-x-5 z-[60]">
+  <div class="glass rounded-full px-4 lg:px-6 h-14 flex items-center justify-between max-w-[1400px] mx-auto">
+    <a href="#top" class="flex items-center gap-3 group" data-h>
+      <span class="hex w-7 h-7 bg-amber flex items-center justify-center"><span class="display text-bg text-[11px] font-bold">YR</span></span>
+      <div class="hidden sm:flex flex-col leading-tight">
+        <span class="text-[13px] font-medium">Yamir Moisés Rojo Andrade</span>
+        <span class="text-[9px] tracking-[0.25em] text-fg-3 uppercase">Operaciones · Chile</span>
+      </div>
+    </a>
+
+    <div class="hidden xl:flex items-center gap-1 text-[11px] tracking-[0.15em] uppercase">
+      <a href="#about" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Acerca</a>
+      <a href="#studies" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Estudios</a>
+      <a href="#cases" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Casos</a>
+      <a href="#services" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Servicios</a>
+      <a href="#stack" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Stack</a>
+      <a href="#voices" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>Referencias</a>
+      <a href="#dossier" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>PDF</a>
+      <a href="#faq" class="px-3 py-1.5 rounded-full hover:bg-bg-hi transition" data-h>FAQ</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <div class="hidden md:flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase text-fg-3 px-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-mint available-dot"></span>
+        <span id="clock">--:--</span>
+      </div>
+      <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber text-bg text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-amber-soft transition magnetic" data-h>
+        Contratar
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="hidden xl:flex fixed right-8 top-1/2 -translate-y-1/2 z-50 flex-col items-end gap-3" id="spy">
+  <a href="#top"     data-spy="top"     class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Inicio</span><span class="dot"></span></a>
+  <a href="#about"   data-spy="about"   class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Acerca</span><span class="dot"></span></a>
+  <a href="#studies" data-spy="studies" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Estudios</span><span class="dot"></span></a>
+  <a href="#numbers" data-spy="numbers" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Cifras</span><span class="dot"></span></a>
+  <a href="#cases"   data-spy="cases"   class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Casos</span><span class="dot"></span></a>
+  <a href="#services" data-spy="services" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Servicios</span><span class="dot"></span></a>
+  <a href="#industries" data-spy="industries" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Industrias</span><span class="dot"></span></a>
+  <a href="#stack"   data-spy="stack"   class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Stack</span><span class="dot"></span></a>
+  <a href="#awards"  data-spy="awards"  class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Premios</span><span class="dot"></span></a>
+  <a href="#voices"  data-spy="voices"  class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Refs</span><span class="dot"></span></a>
+  <a href="#dossier" data-spy="dossier" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">PDF</span><span class="dot"></span></a>
+  <a href="#faq"     data-spy="faq"     class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">FAQ</span><span class="dot"></span></a>
+  <a href="#contact" data-spy="contact" class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Contacto</span><span class="dot"></span></a>
+</div>
+
+<section id="top" class="relative min-h-screen flex flex-col justify-center pt-28 pb-20 px-5 lg:px-10 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto w-full relative">
+
+    <div class="flex items-center gap-3 mb-10 reveal">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-[10px] tracking-[0.25em] uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-mint available-dot"></span>
+        Disponible para contratos · Mayo 2026
+      </div>
+        <span class="hidden sm:inline-flex text-[10px] tracking-[0.25em] uppercase text-fg-3">Antofagasta, Chile · 44 años · nacido en 1982</span>
+    </div>
+
+    <h1 class="display leading-[0.85] tracking-tight">
+      <span class="block text-[14vw] sm:text-[10vw] lg:text-[9vw] xl:text-[160px] lr">
+        <span>Y</span><span>a</span><span>m</span><span>i</span><span>r</span> <span>M</span><span>o</span><span>i</span><span>s</span><span>é</span><span>s</span>
+      </span>
+      <span class="block text-[14vw] sm:text-[10vw] lg:text-[9vw] xl:text-[160px] italic-d text-amber -mt-2 lr" data-d="1">
+        <span>R</span><span>o</span><span>j</span><span>o</span> <span>A</span><span>n</span><span>d</span><span>r</span><span>a</span><span>d</span><span>e</span><span>.</span>
+      </span>
+    </h1>
+
+    <div class="grid lg:grid-cols-12 gap-8 mt-12 lg:mt-16">
+      <div class="lg:col-span-6 reveal" data-d="2">
+        <p class="display text-3xl lg:text-4xl xl:text-5xl leading-snug">
+          Construyo <span class="mark text-amber">operaciones de alta criticidad</span> para las industrias donde el costo del error se mide en millones.
+        </p>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex flex-col justify-end reveal" data-d="3">
+        <p class="text-fg-2 text-base leading-relaxed">
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#about" class="magnetic inline-flex items-center gap-3 px-6 py-4 rounded-full bg-amber text-bg text-[11px] tracking-[0.25em] uppercase font-semibold hover:bg-amber-soft transition" data-h>
+            Comencemos
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#cases" class="magnetic inline-flex items-center gap-3 px-6 py-4 rounded-full border border-line2 text-[11px] tracking-[0.25em] uppercase hover:bg-bg-hi transition" data-h>
+            Ver casos
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-line mt-20 lg:mt-32 border border-line rounded-2xl overflow-hidden">
+      <div class="bg-bg p-6 lg:p-7 reveal">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3">Trayectoria</div>
+        <div class="display text-5xl lg:text-6xl mt-3 ticker"><span class="counter" data-target="25">0</span><span class="text-amber">+</span></div>
+        <div class="text-xs text-fg-3 mt-1">años en operaciones · nacido en 1982</div>
+      </div>
+      <div class="bg-bg p-6 lg:p-7 reveal" data-d="1">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3">Equipo</div>
+        <div class="display text-5xl lg:text-6xl mt-3 ticker"><span class="counter" data-target="300">0</span><span class="text-amber">+</span></div>
+        <div class="text-xs text-fg-3 mt-1">personas dirigidas</div>
+      </div>
+      <div class="bg-bg p-6 lg:p-7 reveal" data-d="2">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3">Inventario</div>
+        <div class="display text-5xl lg:text-6xl mt-3 ticker"><span class="counter" data-target="70">0</span><span class="text-amber">K</span></div>
+        <div class="text-xs text-fg-3 mt-1">SKUs gestionados</div>
+      </div>
+      <div class="bg-bg p-6 lg:p-7 reveal" data-d="3">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3">Seguridad</div>
+        <div class="display text-5xl lg:text-6xl mt-3 ticker">0<span class="text-amber">/</span><span class="text-amber">0</span></div>
+        <div class="text-xs text-fg-3 mt-1">STP / CTP · BHP 2022–25</div>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex absolute bottom-2 right-10 items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-fg-3">
+      Desplazar
+      <svg width="14" height="40" viewBox="0 0 14 40" fill="none">
+        <rect x="0.5" y="0.5" width="13" height="39" rx="6.5" stroke="currentColor" stroke-opacity="0.4"/>
+        <circle cx="7" cy="10" r="2" fill="currentColor"><animate attributeName="cy" values="10;30;10" dur="2s" repeatCount="indefinite"/></circle>
+      </svg>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 inset-x-0 marquee overflow-hidden py-3 bg-bg/60 backdrop-blur">
+    <div class="flex gap-10 whitespace-nowrap scroll-x text-sm tracking-[0.25em] uppercase text-fg-3">
+      <span>BHP</span><span class="text-amber">◆</span>
+      <span>AMSA Centinela</span><span class="text-amber">◆</span>
+      <span>Codelco</span><span class="text-amber">◆</span>
+      <span>SQM</span><span class="text-amber">◆</span>
+      <span>ENEX</span><span class="text-amber">◆</span>
+      <span>Komatsu</span><span class="text-amber">◆</span>
+      <span>Michelin</span><span class="text-amber">◆</span>
+      <span>Copec / Engie</span><span class="text-amber">◆</span>
+      <span>Orica</span><span class="text-amber">◆</span>
+      <span>Hualpén</span><span class="text-amber">◆</span>
+      <span>Finning</span><span class="text-amber">◆</span>
+      <span>Teck QB1/QB2</span><span class="text-amber">◆</span>
+      <span>Albemarle</span><span class="text-amber">◆</span>
+      <span>Enaex</span><span class="text-amber">◆</span>
+      <span>BHP</span><span class="text-amber">◆</span>
+      <span>AMSA Centinela</span><span class="text-amber">◆</span>
+      <span>Codelco</span><span class="text-amber">◆</span>
+      <span>SQM</span><span class="text-amber">◆</span>
+      <span>ENEX</span><span class="text-amber">◆</span>
+      <span>Komatsu</span><span class="text-amber">◆</span>
+      <span>Michelin</span><span class="text-amber">◆</span>
+      <span>Copec / Engie</span><span class="text-amber">◆</span>
+      <span>Orica</span><span class="text-amber">◆</span>
+      <span>Hualpén</span><span class="text-amber">◆</span>
+      <span>Finning</span><span class="text-amber">◆</span>
+      <span>Teck QB1/QB2</span><span class="text-amber">◆</span>
+      <span>Albemarle</span><span class="text-amber">◆</span>
+      <span>Enaex</span><span class="text-amber">◆</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <div class="lg:col-span-5 reveal">
+        <div class="sticky top-28">
+          <div class="relative aspect-square max-w-[480px]">
+            <svg viewBox="0 0 500 500" class="absolute inset-0 w-full h-full">
+              <defs>
+                <path id="cP1" d="M 250,250 m -230,0 a 230,230 0 1,1 460,0 a 230,230 0 1,1 -460,0"/>
+                <path id="cP2" d="M 250,250 m -185,0 a 185,185 0 1,1 370,0 a 185,185 0 1,1 -370,0"/>
+              </defs>
+              <circle cx="250" cy="250" r="230" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <circle cx="250" cy="250" r="185" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+              <circle cx="250" cy="250" r="140" fill="none" stroke="rgba(255,120,73,0.18)" stroke-width="1"/>
+              <circle cx="250" cy="250" r="95" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+
+              <g stroke="rgba(255,255,255,0.18)" stroke-width="1">
+                <line x1="250" y1="14" x2="250" y2="26"/>
+                <line x1="250" y1="474" x2="250" y2="486"/>
+                <line x1="14" y1="250" x2="26" y2="250"/>
+                <line x1="474" y1="250" x2="486" y2="250"/>
+              </g>
+
+              <g class="spin-slow" style="transform-origin:250px 250px">
+                <text font-family="Inter,sans-serif" font-size="9" letter-spacing="6" fill="#ff7849">
+                  <textPath href="#cP1" startOffset="0">★ OPERACIONES · SUPPLY CHAIN · SEGURIDAD · LIDERAZGO · MINERÍA · COMBUSTIBLES · QUÍMICOS · LOGÍSTICA · </textPath>
+                </text>
+              </g>
+              <g class="spin-slow" style="transform-origin:250px 250px; animation-duration:60s; animation-direction:reverse;">
+                <text font-family="Inter,sans-serif" font-size="8" letter-spacing="4" fill="rgba(255,255,255,0.4)">
+                  <textPath href="#cP2" startOffset="0">BHP · AMSA · CODELCO · SQM · ENEX · KOMATSU · MICHELIN · COPEC · ENGIE · ORICA · HUALPÉN · FINNING · TECK · </textPath>
+                </text>
+              </g>
+
+              <g transform="translate(250,250)">
+                <circle r="90" fill="#15151c"/>
+                <circle r="90" fill="none" stroke="rgba(255,120,73,0.4)" stroke-width="1"/>
+                <text y="28" text-anchor="middle" font-family="Hoefler Text, Garamond, serif" font-size="108" font-weight="700" fill="#fafaf7">Y</text>
+              </g>
+
+              <g fill="rgba(255,255,255,0.35)">
+                <circle cx="250" cy="65" r="2.5"/>
+                <circle cx="250" cy="435" r="2.5"/>
+                <circle cx="65" cy="250" r="2.5"/>
+                <circle cx="435" cy="250" r="2.5"/>
+                <circle cx="120" cy="120" r="2"/>
+                <circle cx="380" cy="120" r="2"/>
+                <circle cx="120" cy="380" r="2"/>
+                <circle cx="380" cy="380" r="2"/>
+              </g>
+            </svg>
+
+            <div class="absolute bottom-4 left-4 glass rounded-full px-3 py-1.5 text-[9px] tracking-[0.25em] uppercase">
+              <span class="text-amber">★</span> 25+ años
+            </div>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="glass rounded-xl p-3 text-center">
+              <div class="display text-2xl text-amber">CL</div>
+              <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Chile</div>
+            </div>
+            <div class="glass rounded-xl p-3 text-center">
+              <div id="ageYears" class="display text-2xl" data-age data-birth-year="1982">44</div>
+              <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Años</div>
+            </div>
+            <div class="glass rounded-xl p-3 text-center">
+              <div class="display text-2xl text-amber">1982</div>
+              <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Nacimiento</div>
+            </div>
+            <div class="glass rounded-xl p-3 text-center">
+              <div class="display text-2xl">10</div>
+              <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Formaciones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal" data-d="1">
+        <div class="sn mb-6">§ 01 · Acerca de</div>
+        <h2 class="display text-5xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">El operador<br><span class="italic-d text-amber">como autor.</span></h2>
+
+        <p class="display italic-d text-2xl lg:text-3xl mt-12 leading-snug text-fg-2 max-w-2xl">
+          "Una operación no se mide por afiches de seguridad. Se mide en kilómetros sin incidentes, en auditorías sin desviaciones, en sindicatos que dialogan y en contratos que se renuevan."
+        </p>
+
+        <div class="mt-10 max-w-3xl space-y-5 text-fg-2 leading-relaxed">
+          <p>Yamir Moisés Rojo Andrade es un ejecutivo de operaciones formado entre el rigor militar, la logística industrial y la gestión de contratos de alta criticidad. Chileno, con base en Antofagasta, tiene 44 años y nació en 1982. Su valor aparece donde la operación no puede detenerse: combustible para faenas mineras, flotas interurbanas, centros de distribución, explosivos, neumáticos gigantes, plantas productivas y contratos con mandantes que auditan cada indicador.</p>
+          <p>Su estilo profesional combina presencia en terreno, lectura contractual, cumplimiento legal, seguridad operacional y gestión humana. Ordena equipos grandes, alinea sindicatos, sostiene conversaciones con mandantes y convierte datos operativos en decisiones de continuidad, eficiencia y confianza. No se presenta como un administrador de escritorio: se presenta como alguien que responde por el resultado completo.</p>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 gap-10">
+          <div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber mb-3">Formación</div>
+            <p class="text-fg-2 leading-relaxed">Ingeniero en Administración Logística (U. Arturo Prat). Magíster en Dirección de Operaciones y Logística (UNAB). Experto AN/T en Prevención de Riesgos. Oficial de Ejército en Ciencias Militares. Educación media técnico-profesional y básica con máxima distinción.</p>
+          </div>
+          <div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber mb-3">Terreno</div>
+            <p class="text-fg-2 leading-relaxed">Centros de distribución de 30.000 m². Flotas de 450 unidades. Inventarios de 70.000 SKUs. Equipos de 300+ personas. Tres regímenes: mandante, contratista, subcontratista.</p>
+          </div>
+          <div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber mb-3">Industrias</div>
+            <p class="text-fg-2 leading-relaxed">Gran Minería · Combustibles · Químicos · Explosivos · Transporte de pasajeros · Centros de distribución · Cargas de proyecto · Comercio exterior.</p>
+          </div>
+          <div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber mb-3">Sello</div>
+            <p class="text-fg-2 leading-relaxed">Récord histórico de cero accidentes STP/CTP, premios CONASET y CONACEP, RECSS al 100%, auditorías mineras 100%, criterio en mesa de directorio.</p>
+          </div>
+        </div>
+
+        <div class="mt-16 flex items-center gap-5">
+          <svg width="90" height="48" viewBox="0 0 200 80">
+            <path d="M5,60 C30,15 55,75 80,40 C105,10 130,60 160,25 C175,10 185,30 195,18" fill="none" stroke="#ff7849" stroke-width="1.5" stroke-linecap="round"
+              style="stroke-dasharray:300; stroke-dashoffset:300; animation: dash-draw 2s 0.5s ease-out forwards"/>
+          </svg>
+          <div>
+            <div class="display italic-d text-xl">Yamir Moisés Rojo Andrade</div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3 mt-1">Ingeniero · Magíster · Oficial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="studies" class="relative py-32 lg:py-44 px-5 lg:px-10 bg-bg-soft">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
+      <div class="lg:col-span-5">
+        <div class="sn mb-6">§ 02 · Estudios</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">La base<br><span class="italic-d text-amber">profesional.</span></h2>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7 flex items-end">
+        <p class="text-fg-2 text-lg leading-relaxed">Formación ejecutiva, logística y militar aplicada a operaciones donde conviven seguridad, productividad, relaciones laborales y cumplimiento normativo.</p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 reveal" data-d="1">
+      <div class="lg:col-span-12 glass rounded-3xl p-7 lg:p-10">
+        <div class="edu-timeline space-y-8">
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Etapa inicial · año no especificado</div>
+            <h3 class="display text-3xl mt-2">Colegio Unión Nacional Árabe</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Educación básica completa. Base de disciplina, lectura, comunicación y hábitos de estudio. Titulado con máxima distinción.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Enseñanza media técnico-profesional · año no especificado</div>
+            <h3 class="display text-3xl mt-2">Técnico en Electromecánica</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Liceo Técnico Profesional María Egaña. Formación práctica en sistemas mecánicos, eléctricos, mantenimiento y criterio técnico de taller. Titulado con máxima distinción.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Formación militar · año no especificado</div>
+            <h3 class="display text-3xl mt-2">Oficial de Ejército de Chile en Ciencias Militares</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Intendencia e Inteligencia. Logística, transporte, abastecimiento, cadena de suministro y operaciones. Formación en mando, planificación, presión, disciplina y control. Titulado con máxima distinción.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Pregrado · registro 19303029</div>
+            <h3 class="display text-3xl mt-2">Ingeniero en Administración Logística</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Estatal Arturo Prat. Facultad de Ciencias Empresariales. Formación en inventarios, distribución, transporte, abastecimiento, centros logísticos y gestión empresarial. Titulado con máxima distinción.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Prevención · registro 105792</div>
+            <h3 class="display text-3xl mt-2">Experto AN/T en Prevención de Riesgos</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello AIEP. Escuela de Ingeniería y Construcción. Res. 3314 SNS AN/T-4431. Base legal y técnica para seguridad operacional, salud ocupacional, auditorías y control de riesgos. Máxima distinción.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">2023-2024 · reg. 588/2023 · reg. 2024 N°7031</div>
+            <h3 class="display text-3xl mt-2">Diplomado en Gestión de Personas y Cambio Organizacional</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello. Facultad de Educación y Ciencias Sociales. Liderazgo, gestión del cambio, relaciones laborales y desarrollo organizacional.</p>
+            <div class="distinction-line"><span class="gold-star">★</span><span>Máxima distinción · Mejor rendimiento académico nacional</span></div>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">2024-2026 · folio 3320571</div>
+            <h3 class="display text-3xl mt-2">Magíster en Dirección de Operaciones y Logística</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello. Facultad de Educación y Ciencias Sociales. Dirección estratégica de operaciones, continuidad, productividad, indicadores y logística avanzada.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">2025 - marzo 2026</div>
+            <h3 class="display text-3xl mt-2">Diplomado en Dirección de Operaciones</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello. Facultad de Ingeniería. Enfoque en diseño, control y mejora de operaciones complejas.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">2025 - agosto 2026 · folio 3320571</div>
+            <h3 class="display text-3xl mt-2">Diplomado en Gestión Logística y Cadena de Suministro</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello. Facultad de Ingeniería. Supply chain, distribución, abastecimiento, inventarios y trazabilidad operacional.</p>
+          </article>
+          <article class="edu-item">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">2025 - noviembre 2026 · folio 3320571</div>
+            <h3 class="display text-3xl mt-2">Diplomado en Liderazgo para la Innovación</h3>
+            <p class="text-sm text-fg-2 mt-2 leading-relaxed">Universidad Andrés Bello. Facultad de Ingeniería. Innovación, transformación, liderazgo y gestión de equipos en entornos exigentes.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="numbers" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-20">
+      <div class="lg:col-span-5 reveal">
+        <div class="sn mb-6">§ 03 · Por los números</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">La métrica<br><span class="italic-d text-amber">es la prueba.</span></h2>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7 reveal" data-d="1">
+        <p class="text-fg-2 text-lg leading-relaxed">No hablo de potencial. Hablo de resultados firmados, auditados y reconocidos públicamente por mandantes, organismos nacionales y clientes estratégicos.</p>
+      </div>
+    </div>
+
+    <div class="metric-panel grid lg:grid-cols-3 gap-px border border-line2 rounded-3xl overflow-hidden">
+      <div class="bg-bg p-8 lg:p-10 reveal">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-amber">ENEX · AMSA Centinela</div>
+        <div class="display text-[120px] leading-none mt-6 num stat-num">3M+</div>
+        <div class="text-base text-fg-2 mt-2">km / año recorridos</div>
+        <div class="hr mt-6 mb-6 h-px bg-line"></div>
+        <p class="text-sm text-fg-3 leading-relaxed">Cuatro años consecutivos (2022–2025). 6.000+ turnos anuales. 300.000 m³ de combustible entregados a la Gran Minería sin pausa.</p>
+      </div>
+      <div class="bg-bg p-8 lg:p-10 reveal" data-d="1">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-amber">BHP Spence · 2022–2025</div>
+        <div class="display text-[120px] leading-none mt-6 num stat-num glow-amber">0</div>
+        <div class="text-base text-fg-2 mt-2">accidentes STP / CTP</div>
+        <div class="hr mt-6 mb-6 h-px bg-line"></div>
+        <p class="text-sm text-fg-3 leading-relaxed">Cuatro años al frente del contrato sin un solo accidente con tiempo perdido ni con tratamiento. 100% en auditorías cruzadas mineras y controles de fatiga.</p>
+      </div>
+      <div class="bg-bg p-8 lg:p-10 reveal" data-d="2">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Komatsu Cummins · CD La Negra</div>
+        <div class="display text-[120px] leading-none mt-6 num stat-num">−80%</div>
+        <div class="text-base text-fg-2 mt-2">costos logísticos</div>
+        <div class="hr mt-6 mb-6 h-px bg-line"></div>
+        <p class="text-sm text-fg-3 leading-relaxed">Reestructuración estratégica de red de distribución + implementación SAP MMS/WMS con radiofrecuencia. +90% precisión en inventarios.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 mt-8">
+      <div class="glass rounded-2xl p-5 reveal lift">
+        <div class="display text-4xl stat-num">100%</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">Cumplimiento auditorías mineras BHP / AMSA</div>
+      </div>
+      <div class="glass rounded-2xl p-5 reveal lift" data-d="1">
+        <div class="display text-4xl stat-num">300+</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">Personas bajo dirección directa</div>
+      </div>
+      <div class="glass rounded-2xl p-5 reveal lift" data-d="2">
+        <div class="display text-4xl stat-num">+90%</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">Puntualidad en tiempos de llegada (Viggo)</div>
+      </div>
+      <div class="glass rounded-2xl p-5 reveal lift" data-d="3">
+        <div class="display text-4xl stat-num">30K</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">m² centros de distribución dirigidos</div>
+      </div>
+      <div class="glass rounded-2xl p-5 reveal lift" data-d="4">
+        <div class="display text-4xl stat-num">70K</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">SKUs gestionados (línea Cummins)</div>
+      </div>
+      <div class="glass rounded-2xl p-5 reveal lift" data-d="5">
+        <div class="display text-4xl stat-num">RECSS</div>
+        <div class="text-[10px] tracking-widest uppercase text-fg-3 mt-2">3 años consecutivos al 100%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="relative py-32 lg:py-44 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-5 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 reveal">
+      <div>
+        <div class="sn mb-6">§ 04 · Casos de estudio</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Donde he<br><span class="italic-d text-amber">firmado.</span></h2>
+      </div>
+      <div class="flex items-center gap-4">
+        <p class="text-sm text-fg-3 max-w-xs">Nueve cargos · Once contratos majors · Una década en alta dirección.</p>
+        <div class="flex gap-2">
+          <button id="casePrev" aria-label="Caso anterior" class="p-3 rounded-full border border-line2 hover:bg-bg-hi transition" data-h><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button id="caseNext" aria-label="Caso siguiente" class="p-3 rounded-full border border-line2 hover:bg-bg-hi transition" data-h><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <input id="caseSlider" class="case-slider mt-8" type="range" min="0" max="0" value="0" step="1" aria-label="Selector manual de casos">
+    </div>
+  </div>
+
+  <div id="casesTrack" class="flex gap-6 overflow-x-auto no-bar pb-6 px-5 lg:px-10">
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2022 — 2025 · Administrador General</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">ENEX × BHP Spence × AMSA Centinela</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Representante legal de las operaciones ENEX S.A. para los contratos de la Gran Minería. Centros de distribución en Mejillones, Sierra Gorda, Calama y Antofagasta. +100 trabajadores. Flota Volvo · Mercedes-Benz · Freightliner conforme al DS 160.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">3M+</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">km/año</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">6K</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Turnos/año</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">0</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">STP/CTP</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">CONASET</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">CONACEP</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">RAEV</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">TÜV Rheinland</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">SIGA</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2021 — 2022 · Jefe Zonal de Operaciones</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Viggo × Tur Bus</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Representante legal · II Región Antofagasta. Contratos Atacama Minerals, Finning MEL, Molyb (Codelco), Caserones, Orica, SQM Toconao. Flota 300+ colaboradores. Liderazgo en electromovilidad (King Long XMQ 6130 eTech).</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">+90%</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Puntualidad</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">−80%</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Costos op.</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">100%</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">SLA</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Giro Limpio SQM</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">eTech</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">GTP BCN</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Scania</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2019 — 2021 · Jefe Zonal / Gerente Subrogante</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Transportes Hualpén</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Sucursal 24/7 para clientes mineros. +100 contratos: Finning, Enaex, Codelco, Komatsu, CVV, Chuquicamata, Albemarle, Teck QB1/QB2, Bechtel, Compass, Sodexo. Flota: 150 buses + 150 minibuses + 150 microbuses.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">450</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Unidades</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">14</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Prevencionistas</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">−90%</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Incidentes</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">ISO 9001</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">ISO 45001</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">ISO 14001</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">ISO 39001</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Hualpén Digital</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2018 — 2019 · Gerente de Operaciones CD</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Michelin × Hellmann Internacional</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">CD 30.000 m² · +250 transportistas. Stock 1.000+ neumáticos Michelin XDR3 (59/80R63) — los más grandes del mundo, para CAT 797B (4.2 m de diámetro). Recepción portuaria ATI/EPA/PA/SAA. Cross-Docking 15.000 m².</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">30K</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">m² CD</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">1K+</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">XDR3 stock</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">0</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Pérdidas</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">SIDREP</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Incoterms</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Cross-Docking</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">FIFO/FEFO/LIFO</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2014 — 2017 · Gerente / Sub Gerente</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Orica × Enaex × Maxam</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Explosivos y detonadores bajo Ley 17.798. Transición de adjudicación 15.000 m² → 30.000 m² — continuidad requerida por los clientes para asegurar know-how. Convoyes con Seguridad Armada (ex FF.AA./Carabineros). Cordtex™, Exel™, Pentex™.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">30K</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">m² sucursal</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">100+</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Colaboradores</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">24/7</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Operación</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">EBS</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">4D</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">WebGen</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">RHINO</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Ley 17.798</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2011 — 2013 · Jefe Planta y CD</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Copec × Engie · Tocopilla</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Termoeléctrica. Carga/descarga Buque Tanque PC6 (Banker). Trazabilidad Diesel, PC6, JET A1, lubricantes industriales. Vinculación comunitaria activa con Copec S.A. en Tocopilla. Sostenibilidad y transición energética.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">100%</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">↓ Incidentes</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">30%</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">↓ Costos op.</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">0</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Pérdidas</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">DS 160</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">DS 148</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Ley 16.744</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2008 — 2011 · Jefe Operaciones CD</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">Komatsu Cummins Chile</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">+70.000 SKUs línea Cummins. Implementación SAP MMS/WMS + Radiofrecuencia (RF). Recepción y logística de los primeros camiones autónomos CAEX para minería chilena. Transición CD La Portada → CD La Negra → CD La Portada.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">70K</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">SKUs Cummins</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">+90%</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Precisión inv.</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">−80%</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Costos log.</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">SAP MMS</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">SAP WMS</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">RF</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">CAEX</span>
+      </div>
+    </article>
+
+    <article class="case glass rounded-3xl p-8 lg:p-10 w-[88vw] sm:w-[600px] lg:w-[720px] shrink-0 reveal tilt" data-h>
+      <div class="flex items-start justify-between gap-6 mb-8">
+        <div>
+          <div class="case-period uppercase text-amber">2005 — 2008 · Líder Operaciones Planta</div>
+          <h3 class="display text-4xl lg:text-5xl mt-3 leading-tight">SQM · Soquimich</h3>
+        </div>
+      </div>
+      <p class="text-fg-2 leading-relaxed mb-8">Plantas de Prilado Coya Sur · María Elena · Pedro de Valdivia · Sulfato · Granulación · KCL · Secado KNO3 · Pto. Tocopilla. Logística multimodal ferroviario + camiones + marítimo. Despacho internacional de nitratos y sulfatos.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">7</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Plantas dirigidas</div>
+        </div>
+        <div class="rounded-xl border border-line p-4">
+          <div class="display text-3xl">3</div>
+          <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">Modos transporte</div>
+        </div>
+        <div class="rounded-xl border border-line p-4 bg-amber-tint border-amber">
+          <div class="display text-3xl text-amber">∞</div>
+          <div class="text-[9px] tracking-widest uppercase text-amber-soft mt-1">Exportación</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">KNO3</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">KCL</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">NPK</span>
+        <span class="px-3 py-1 rounded-full bg-bg-hi text-[10px] tracking-widest uppercase">Sala Control</span>
+      </div>
+    </article>
+
+    <div class="shrink-0 w-2"></div>
+  </div>
+</section>
+
+<section id="services" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-20">
+      <div class="lg:col-span-6 reveal">
+        <div class="sn mb-6">§ 05 · Servicios</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Cómo<br><span class="italic-d text-amber">puedo servir.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end reveal" data-d="1">
+        <p class="text-fg-2 text-lg leading-relaxed">Seis dominios donde aporto valor inmediato a corporaciones, mineras y empresas que dependen de operaciones críticas para escalar.</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden">
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">01</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <rect x="4" y="14" width="32" height="22" rx="1"/>
+            <path d="M4 20h32M12 14V8h16v6"/>
+            <circle cx="14" cy="30" r="2" fill="currentColor"/>
+            <circle cx="26" cy="30" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Dirección General de Operaciones</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Gerencia integral de centros de distribución, sucursales y plantas. Layout industrial, mantenimiento, RR.HH., control de flota y administración de contratos críticos.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">CD 30K m²</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">+300 personas</span>
+        </div>
+      </div>
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-d="1" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">02</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <circle cx="20" cy="20" r="14"/>
+            <path d="M20 6v28M6 20h28M9 9l22 22M31 9 9 31"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Supply Chain & Logística</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Diseño y optimización de cadenas de suministro multimodales (terrestre, ferroviario, marítimo). Inventarios masivos · Cross-Docking · FIFO/FEFO/LIFO · Comercio exterior.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">+70K SKUs</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">Incoterms</span>
+        </div>
+      </div>
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-d="2" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">03</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <path d="M20 4 6 10v10c0 8 6 14 14 16 8-2 14-8 14-16V10L20 4z"/>
+            <path d="m14 20 4 4 8-8"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Seguridad y SSO</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Implementación de sistemas de gestión integrados (ISO 9001/14001/45001/39001). Cumplimiento legal completo · PREXOR · PLANESI · CEAL-SM · Récord cero accidentes.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">Cero STP/CTP</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">Auditor ISO</span>
+        </div>
+      </div>
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-d="3" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">04</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <rect x="4" y="6" width="32" height="20" rx="2"/>
+            <path d="M4 22h32M14 32h12M20 26v6"/>
+            <circle cx="12" cy="14" r="2" fill="currentColor"/>
+            <path d="M18 12h12M18 16h8"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Acreditación & Compliance</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Administración experta de plataformas SIGA · SERCOL · MyPass · LMS · SAR · DLMS · DBMS. Carpetas de arranque · Plan de Ejecución de Contrato (CEP) · Performance Meeting.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">BHP / AMSA</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">CIM · CEP</span>
+        </div>
+      </div>
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-d="4" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">05</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <circle cx="14" cy="14" r="6"/><circle cx="28" cy="14" r="6"/><circle cx="21" cy="28" r="6"/>
+            <path d="M14 20v2M28 20v2M21 28v-2"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Liderazgo & Relaciones Laborales</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Dirección de equipos multidisciplinarios. Negociación sindical · Manejo de conflictos · Selección y reclutamiento · Programas de talento y bienestar · Valor compartido comunitario.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">+300 personas</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">Sindicatos</span>
+        </div>
+      </div>
+
+      <div class="service bg-bg p-8 lg:p-10 reveal" data-d="5" data-h>
+        <div class="flex items-center justify-between mb-8">
+          <span class="display italic-d text-fg-3 text-2xl">06</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber">
+            <path d="M20 4v6M20 30v6M4 20h6M30 20h6M9 9l4 4M27 27l4 4M9 31l4-4M27 13l4-4"/>
+            <circle cx="20" cy="20" r="6"/>
+          </svg>
+        </div>
+        <h3 class="display text-2xl leading-snug">Transformación Digital Operativa</h3>
+        <p class="text-sm text-fg-2 mt-3 leading-relaxed">Implementación SAP (MM/PM/WMS/FI). Telemetría (Wisetrack · FuelTrack · Migtra · Guardian). Radiofrecuencia. Electromovilidad. Precursor del programa Hualpén Digital.</p>
+        <div class="mt-6 flex flex-wrap gap-1.5">
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">SAP Experto</span>
+          <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded bg-bg-hi">Telemetría</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-20">
+      <div class="lg:col-span-6 reveal">
+        <div class="sn mb-6">§ 06 · Industrias</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Donde sirvo<br><span class="italic-d text-amber">con propiedad.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end reveal" data-d="1">
+        <p class="text-fg-2 text-lg leading-relaxed">Mi experiencia abarca operaciones críticas a través de los sectores que dependen de cadenas de suministro infalibles.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">01</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><path d="M4 32h32M8 32V18l8-8 8 6 8-4v20"/><path d="M14 32v-8h6v8"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Gran Minería</div>
+          <div class="text-xs text-fg-3 mt-2">Cobre · Litio · Potasio · Nitratos</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">15+ años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="1" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">02</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><path d="M20 4v32M12 8c4 4 12 4 16 0M10 20c5 4 15 4 20 0M12 32c4-3 12-3 16 0"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Energía & Combustibles</div>
+          <div class="text-xs text-fg-3 mt-2">Diesel · JET A1 · Gas · Lubricantes</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">8 años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="2" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">03</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><rect x="6" y="12" width="22" height="14" rx="2"/><circle cx="13" cy="30" r="3"/><circle cx="26" cy="30" r="3"/><path d="M28 18h6l2 4v4h-8"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Transporte & Logística</div>
+          <div class="text-xs text-fg-3 mt-2">Pasajeros · Carga · Combustible · Cisternas</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">12 años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="3" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">04</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><path d="M8 32V14L20 8l12 6v18M14 32V20h12v12"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Centros de Distribución</div>
+          <div class="text-xs text-fg-3 mt-2">Hasta 30.000 m² · Cross-Docking</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">10+ años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">05</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><circle cx="20" cy="20" r="6"/><path d="m6 6 8 8M34 6l-8 8M6 34l8-8M34 34l-8-8"/><circle cx="20" cy="20" r="14" stroke-dasharray="2 2"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Químicos & Explosivos</div>
+          <div class="text-xs text-fg-3 mt-2">Ley 17.798 · Cordtex · Pentex · Emulsiones</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">3 años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="1" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">06</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><circle cx="20" cy="20" r="14"/><path d="M6 20c5-3 23-3 28 0M20 6c-3 5-3 23 0 28"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Comercio Internacional</div>
+          <div class="text-xs text-fg-3 mt-2">ATI · EPA · PA · SAA · Incoterms</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">8 años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="2" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-fg-3">07</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><rect x="4" y="14" width="32" height="20" rx="2"/><path d="M14 14V8c0-2 2-4 4-4h4c2 0 4 2 4 4v6"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Cargas de Proyecto</div>
+          <div class="text-xs text-fg-3 mt-2">Sobredimensionadas · CAEX · XDR3</div>
+          <div class="text-[10px] text-amber mt-3 tracking-widest uppercase">10+ años</div>
+        </div>
+      </div>
+
+      <div class="industry-card lift relative aspect-[5/6] rounded-3xl overflow-hidden p-6 flex flex-col justify-between reveal" data-d="3" data-h>
+        <div class="flex items-start justify-between">
+          <span class="display italic-d text-amber">08</span>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" class="text-amber"><path d="M20 4v32M4 20h32"/><circle cx="20" cy="20" r="6" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="display text-3xl leading-tight">Su próxima<br>industria</div>
+          <div class="text-xs text-amber-soft mt-2">¿Bebidas? ¿Retail? ¿Manufactura?</div>
+          <a href="#contact" class="text-[10px] text-amber mt-3 tracking-widest uppercase block hover:underline">Conversemos →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
+      <div class="lg:col-span-6">
+        <div class="sn mb-6">§ 07 · Stack operativo</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Las herramientas<br><span class="italic-d text-amber">que opero.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-fg-2 text-lg leading-relaxed">Sistemas ERP, telemetría, plataformas de acreditación minera y normativas que manejo a nivel experto.</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10 reveal" id="stackFilters">
+      <button data-f="all"   class="chip-st active px-4 py-2 rounded-full border border-line2 text-[11px] tracking-[0.2em] uppercase transition" data-h>Todo</button>
+      <button data-f="erp"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>ERP / WMS</button>
+      <button data-f="tel"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>Telemetría</button>
+      <button data-f="acr"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>Acreditación</button>
+      <button data-f="iso"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>Normas ISO</button>
+      <button data-f="law"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>Marco legal</button>
+      <button data-f="vol"   class="chip-st px-4 py-2 rounded-full border border-line text-[11px] tracking-[0.2em] uppercase hover:bg-bg-hi transition" data-h>Voladura</button>
+    </div>
+
+    <div id="stackGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 reveal" data-d="1"></div>
+  </div>
+
+  <style>
+    .chip-st.active { background: var(--amber); color: var(--bg); border-color: var(--amber); }
+  </style>
+</section>
+
+<section id="awards" class="relative py-32 lg:py-44 px-5 lg:px-10 bg-bg-soft">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-20 reveal">
+      <div class="lg:col-span-6">
+        <div class="sn mb-6">§ 08 · Reconocimientos</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Lo que la<br><span class="italic-d text-amber">industria firma.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-fg-2 text-lg leading-relaxed">Premios nacionales y reconocimientos de mandantes que validan el récord. Ninguno auto-otorgado.</p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-4">
+      <div class="lg:col-span-7 reveal lift">
+        <div class="glass rounded-3xl p-10 lg:p-12 relative overflow-hidden h-full">
+          <div class="absolute -top-20 -right-20 w-80 h-80 opacity-30">
+            <svg viewBox="0 0 200 200" class="w-full h-full">
+              <defs>
+                <path id="awP" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
+              </defs>
+              <g class="spin-slow" style="transform-origin:100px 100px;animation-duration:30s">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#ff7849" stroke-width="0.5"/>
+                <text font-family="Inter,sans-serif" font-size="10" letter-spacing="4" fill="#ff7849">
+                  <textPath href="#awP" startOffset="0">★ FLOTA MÁS SEGURA DE CHILE ★ CONACEP ★ CONASET ★ </textPath>
+                </text>
+              </g>
+            </svg>
+          </div>
+          <div class="relative">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Premio Nacional</div>
+            <div class="display text-6xl lg:text-7xl mt-4 leading-[0.9]">Flota más segura<br><span class="italic-d text-amber">de Chile.</span></div>
+            <div class="mt-8 grid grid-cols-3 gap-6 max-w-md">
+              <div>
+                <div class="display text-2xl">2022</div>
+                <div class="text-[9px] text-fg-3 tracking-widest uppercase mt-1">CONASET</div>
+              </div>
+              <div>
+                <div class="display text-2xl">2023</div>
+                <div class="text-[9px] text-fg-3 tracking-widest uppercase mt-1">CONACEP</div>
+              </div>
+              <div>
+                <div class="display text-2xl">2024</div>
+                <div class="text-[9px] text-fg-3 tracking-widest uppercase mt-1">RAEV</div>
+              </div>
+            </div>
+            <p class="text-sm text-fg-2 mt-8 max-w-lg">Flota ENEX S.A. · RCL S.A. para los contratos BHP Spence y AMSA Centinela reconocida por CONASET como una de las flotas más seguras de Chile durante cuatro años consecutivos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 space-y-4">
+        <div class="glass rounded-2xl p-6 lift reveal" data-h>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Premio RAEV</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-amber"><path d="M12 2 15 8l6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+          </div>
+          <div class="display text-2xl leading-tight">Desempeño de flotas ENEX</div>
+          <div class="text-xs text-fg-3 mt-2">Índices individuales y por flotas de 0.1, máximo 0.3 riesgos de accidente por exceso de velocidad — Premio 2022, 2023, 2025.</div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 lift reveal" data-d="1" data-h>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Reconocimiento</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-amber"><path d="M8 21h8M12 17v4M6 3h12v4a6 6 0 0 1-12 0V3z"/><path d="M6 7H4a2 2 0 0 1-2-2V3h4M18 7h2a2 2 0 0 0 2-2V3h-4"/></svg>
+          </div>
+          <div class="display text-2xl leading-tight">RECSS 100%</div>
+          <div class="text-xs text-fg-3 mt-2">Tres años consecutivos alcanzando 100% en toma y cumplimiento RECSS. Cumplimiento integral Ley 16.744.</div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 lift reveal" data-d="2" data-h>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Distinción académica</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-amber"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="display text-2xl leading-tight">Mejor Rendimiento Académico Nacional</div>
+          <div class="text-xs text-fg-3 mt-2">Universidad Andrés Bello · Diplomado Gestión de Personas y Cambio Organizacional.</div>
+        </div>
+
+        <div class="glass rounded-2xl p-6 lift reveal" data-d="3" data-h>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Auditoría TÜV</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-amber"><path d="m9 12 2 2 4-4M12 2 4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/></svg>
+          </div>
+          <div class="display text-2xl leading-tight">90–100% Rheinland Group</div>
+          <div class="text-xs text-fg-3 mt-2">Cumplimiento sostenido del desempeño esperado en auditorías TÜV Rheinland Group durante todo el contrato BHP Spence.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voices" class="relative py-32 lg:py-44 px-5 lg:px-10 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
+      <div class="lg:col-span-6">
+        <div class="sn mb-6">§ 09 · Referencias</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Red laboral<br><span class="italic-d text-amber">verificable.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-fg-2 text-lg leading-relaxed">Los datos completos se entregan por canal formal y previa solicitud.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Alejandro González Cid</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Gerente General Zona Norte, Komatsu Cummins Chile; Country Manager Novelis Empresa Multinacional</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Mandantes y contratos</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Sebastián Azócar</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Gerente Nacional de Transportes, ENEX S.A.; Country Manager Logística y Abastecimiento ORICA Chile S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Mandantes y contratos</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Roberto Illanes Vallejos</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Director Ejecutivo Senior de Operaciones, Servicios y Contratos, FINNING Sudamérica</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Mandantes y contratos</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Rodrigo Valdés</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Gerente Nacional de Operaciones Logísticas, Red Cargo Logística S.A. Transportes Díaz Ltda.; Gerente de Operaciones Transportes Sotraser</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Mandantes y contratos</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Maureen Irachet</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Jefa Regional de Abastecimiento y Transporte Proyecto BHP ENEX S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">BHP / ENEX</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Raimundo Streeter</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Principal P&C I&C, BHP; ex Líder de Abastecimiento y Transporte - Contract Owner</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">BHP / ENEX</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Venus Sotello</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Contract Owner - Gerencia de Abastecimiento y Transportes, BHP Spence</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">BHP / ENEX</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Manuel González</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Ejecutivo del Directorio - Gerencia Comercial Nacional, Empresas Hualpén S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Transporte y logística</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Claudio Osses</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Director Nacional de Operaciones, Empresas Hualpén S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Transporte y logística</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Alejandra Baeza</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Jefa Nacional de Acreditaciones Gran Minería, AGUNSA S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Transporte y logística</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Leandro Martínez</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Presidente Sindicato de Transportistas del Norte, Hualpén S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Relaciones laborales</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Juan Martínez</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Gerencia de Relaciones Laborales, Minera Radomiro Tomic; Jefe de Recursos Humanos Hualpén S.A.; Jefe Zonal de Operaciones Viggo</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Relaciones laborales</div></article>
+      <article class="glass rounded-2xl p-6 lift" data-h><div class="display text-2xl">Ayleen Núñez</div><div class="text-[13px] text-fg-2 mt-2 leading-snug">Jefa Zona Norte de Gestión de Personas y Desarrollo Organizacional, Hualpén S.A.</div><div class="text-[9px] tracking-[0.25em] uppercase text-fg-3 mt-5">Área verificable</div><div class="text-sm text-amber mt-2">Relaciones laborales</div></article>
+      <article class="glass rounded-2xl p-6 lift border border-amber sm:col-span-2 lg:col-span-3" data-h>
+        <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Datos no completos</div>
+        <p class="text-fg-2 leading-relaxed mt-4">Por privacidad y profesionalismo, esta sección muestra solo nombres y área de referencia. El dossier ejecutivo conserva el contexto profesional y la verificación completa puede solicitarse directamente.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="dossier" class="relative py-32 lg:py-44 px-5 lg:px-10 bg-bg-soft">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
+      <div class="lg:col-span-6">
+        <div class="sn mb-6">§ 10 · PDF ejecutivo</div>
+        <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Dossier ejecutivo<br><span class="italic-d text-amber">sin omisiones.</span></h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-fg-2 text-lg leading-relaxed">Documento ejecutivo completo para revisión de trayectoria, formación, métricas, competencias y referencias profesionales.</p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-8 reveal">
+        <div class="glass rounded-3xl overflow-hidden border border-line2 min-h-[620px]">
+          <object data="CV.pdf" type="application/pdf" class="w-full h-[78vh] min-h-[620px]">
+            <div class="p-8">
+              <p class="text-fg-2 leading-relaxed">Tu navegador no pudo mostrar el PDF embebido.</p>
+              <a href="CV.pdf" class="inline-flex mt-5 px-5 py-3 rounded-full bg-amber text-bg text-[11px] tracking-[0.25em] uppercase font-semibold" data-h>Ver PDF completo</a>
+            </div>
+          </object>
+        </div>
+      </div>
+      <aside class="lg:col-span-4 reveal" data-d="1">
+        <div class="sticky top-28 glass rounded-3xl p-8">
+          <div class="text-[10px] tracking-[0.25em] uppercase text-amber mb-6">Contenido del PDF</div>
+          <ul class="space-y-4 text-sm text-fg-2 leading-relaxed">
+            <li>Resumen ejecutivo profesional.</li>
+            <li>Impacto rápido: años, equipos, centros logísticos, SKUs, seguridad, auditorías y premios.</li>
+            <li>Áreas de mayor valor para el empleador.</li>
+            <li>Trayectoria ejecutiva por periodos y proyectos.</li>
+            <li>Formación académica, técnica y militar.</li>
+            <li>Competencias técnicas, normativa, plataformas, telemetría y referencias.</li>
+          </ul>
+          <a href="CV.pdf" class="magnetic inline-flex items-center gap-3 mt-8 px-5 py-3 rounded-full bg-amber text-bg text-[11px] tracking-[0.25em] uppercase font-semibold hover:bg-amber-soft transition" data-h>
+            Abrir PDF
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="relative py-32 lg:py-44 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5 reveal">
+        <div class="sticky top-28">
+          <div class="sn mb-6">§ 11 · Preguntas</div>
+          <h2 class="display text-5xl lg:text-7xl leading-[0.95]">Lo que<br><span class="italic-d text-amber">se pregunta.</span></h2>
+          <p class="text-fg-2 mt-8 max-w-md">Las respuestas más comunes que recibo de comités evaluadores y directorios.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-full border border-line2 text-[11px] tracking-[0.25em] uppercase hover:bg-bg-hi transition" data-h>
+            Otra pregunta
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal" data-d="1">
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Atiende solo a empresas mineras del norte de Chile?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Aunque mi expertise principal es la Gran Minería, mis competencias en supply chain, operaciones y seguridad aplican a cualquier industria que dependa de cadenas de suministro robustas: bebidas, retail, manufactura, energía, comercio internacional. Estoy abierto a contratos en todo Chile y considero proyectos internacionales.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Cuál es su modalidad de contratación?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Disponible para: (a) contrato indefinido como Gerente / Director de Operaciones; (b) contrato a plazo fijo para implementación de proyectos críticos (3–18 meses); (c) consultoría especializada en supply chain, acreditación minera o auditoría de operaciones. Disponibilidad inmediata.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Cómo verifico el récord de cero accidentes en BHP?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Las referencias laborales incluyen al Contract Owner directo en BHP Spence (Venus Sotello) y al Principal P&C I&C de BHP (Raimundo Streeter). Sus contactos están disponibles para verificación directa. Además, el reconocimiento CONASET es público y auditable.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Maneja inglés a nivel técnico?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Nivel medio en conversación; nivel alto en traducción técnica. He gestionado documentación, normativas (Incoterms, ISO) y comunicación con mandantes multinacionales (BHP, Michelin, Hellmann, Komatsu Cummins) en idioma inglés durante toda mi carrera.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Está dispuesto a relocalizarse?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Sí. Disponibilidad inmediata para proyectos en cualquier región de Chile. Considero relocalización internacional para mandantes que requieran experiencia en supply chain minero, comercio exterior o gestión de explosivos bajo regímenes regulados.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Qué hace diferente a un Administrador General formado militarmente?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Disciplina en la ejecución, cumplimiento normativo absoluto, jerarquía en el manejo de equipos y, sobre todo, criterio bajo presión. La formación de Oficial de Ejército me dio el marco mental para asumir contratos donde el costo del error es exponencial. Las mineras lo valoran particularmente.</div>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span class="display text-xl lg:text-2xl pr-4">¿Cómo gestiona la relación sindical?</span>
+            <svg class="plus shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <div class="answer">Diálogo permanente, transparencia en KPIs, inclusión de líderes sindicales en programas de mejora continua (como la Escuela de Conductores Calama). Mi récord incluye negociaciones complejas y la mantención de continuidad operativa en escenarios de alta tensión laboral, incluyendo pandemia.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="relative py-32 lg:py-44 px-5 lg:px-10 overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full" style="background: radial-gradient(circle, var(--amber-tint), transparent 60%)"></div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto relative">
+    <div class="text-center reveal mb-16">
+      <div class="sn justify-center mb-8" style="margin-left:auto;margin-right:auto;width:fit-content">§ 12 · Contacto</div>
+      <h2 class="display text-6xl lg:text-9xl xl:text-[180px] leading-[0.85]">¿Listos para<br><span class="italic-d text-amber">trabajar?</span></h2>
+      <p class="text-fg-2 text-lg lg:text-xl mt-10 max-w-2xl mx-auto">Estoy disponible para asumir dirección general, consultoría estratégica o auditoría de operaciones. Una conversación de 30 minutos suele bastar para evaluar el ajuste.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-4 max-w-5xl mx-auto reveal" data-d="1">
+      <button data-copy="+56996910700" class="copy-btn lg:col-span-6 group glass rounded-3xl p-8 text-left hover:border-amber transition" data-h>
+        <div class="flex items-center justify-between mb-6">
+          <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Línea directa · Móvil</div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-fg-3 group-hover:text-amber transition"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </div>
+        <div class="display text-4xl lg:text-5xl copy-label">+56 9 9691 0700</div>
+        <div class="text-xs text-fg-3 mt-4">Toque para copiar al portapapeles</div>
+      </button>
+
+      <a href="mailto:yamirrojo2017@gmail.com?subject=Propuesta%20de%20Contrato" class="lg:col-span-6 group glass rounded-3xl p-8 hover:border-amber transition block" data-h>
+        <div class="flex items-center justify-between mb-6">
+          <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Correo principal</div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-fg-3 group-hover:text-amber transition"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><path d="m22 6-10 7L2 6"/></svg>
+        </div>
+        <div class="display text-3xl lg:text-4xl break-all">yamirrojo2017@gmail.com</div>
+        <div class="text-xs text-fg-3 mt-4">Respuesta dentro de 24 horas hábiles</div>
+      </a>
+
+      <a href="mailto:y.rojoandrade@uandresbello.edu" class="lg:col-span-6 group glass rounded-3xl p-6 hover:border-amber transition block" data-h>
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-[10px] tracking-[0.25em] uppercase text-amber">Correo académico · UNAB</div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-fg-3 group-hover:text-amber transition"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="display text-xl lg:text-2xl break-all">y.rojoandrade@uandresbello.edu</div>
+      </a>
+
+      <div class="lg:col-span-6 glass rounded-3xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase text-amber">
+            <span class="w-1.5 h-1.5 rounded-full bg-mint available-dot"></span>
+            Estado actual
+          </div>
+        </div>
+        <div class="display text-xl lg:text-2xl">Disponibilidad inmediata</div>
+        <div class="text-xs text-fg-3 mt-3">Antofagasta · <span id="clock2">--:--</span> CLT · Movilidad nacional + internacional</div>
+      </div>
+
+      <button id="hireBtnCta" class="lg:col-span-12 magnetic mt-2 bg-amber text-bg rounded-3xl p-8 hover:bg-amber-soft transition group" data-h>
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-[10px] tracking-[0.25em] uppercase opacity-70">El siguiente paso</div>
+            <div class="display text-3xl lg:text-5xl mt-2">Iniciar conversación →</div>
+          </div>
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="hidden lg:block group-hover:rotate-45 transition"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-12 px-5 lg:px-10">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="grid lg:grid-cols-12 gap-8 mb-10">
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex w-9 h-9 bg-amber flex items-center justify-center"><span class="display text-bg text-sm font-bold">YR</span></span>
+          <div>
+            <div class="display text-lg">Yamir Moisés Rojo Andrade</div>
+            <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3">Ingeniero · Magíster · Oficial</div>
+          </div>
+        </div>
+        <p class="text-sm text-fg-3 leading-relaxed max-w-md">Portafolio ejecutivo. 25+ años dirigiendo supply chain, operaciones críticas y seguridad para la Gran Minería del norte de Chile.</p>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3 mb-4">Navegación</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="ul-grow" data-h>Acerca</a></li>
+          <li><a href="#studies" class="ul-grow" data-h>Estudios</a></li>
+          <li><a href="#cases" class="ul-grow" data-h>Casos</a></li>
+          <li><a href="#services" class="ul-grow" data-h>Servicios</a></li>
+          <li><a href="#voices" class="ul-grow" data-h>Referencias</a></li>
+          <li><a href="#dossier" class="ul-grow" data-h>PDF ejecutivo</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-fg-3 mb-4">Contacto directo</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:+56996910700" class="ul-grow" data-h>+56 9 9691 0700</a></li>
+          <li><a href="mailto:yamirrojo2017@gmail.com" class="ul-grow" data-h>yamirrojo2017@gmail.com</a></li>
+          <li><a href="mailto:y.rojoandrade@uandresbello.edu" class="ul-grow" data-h>y.rojoandrade@uandresbello.edu</a></li>
+          <li class="text-fg-3 mt-2">Antofagasta, Chile · UTC-4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] tracking-[0.25em] uppercase text-fg-3">
+      <span>© 2026 · Yamir Moisés Rojo Andrade</span>
+      <span>Creado por: Yamir Matias Rojo Galleguillos con HTML.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-full bg-amber text-bg text-sm font-semibold shadow-2xl opacity-0 translate-y-3 transition pointer-events-none z-[200]">Copiado</div>
+
+<script>
+addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('gone'), 400));
+
+const root = document.documentElement;
+root.dataset.theme = 'dark';
+
+document.querySelectorAll('[data-age]').forEach(el => {
+  const birthYear = Number(el.dataset.birthYear);
+  if (birthYear) el.textContent = String(new Date().getFullYear() - birthYear);
+});
+
+const cursor = document.getElementById('cursor');
+const trail = document.getElementById('cursor-trail');
+let mx=0, my=0, cx=0, cy=0, tx=0, ty=0;
+addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+function raf() {
+  cx += (mx - cx) * 0.28; cy += (my - cy) * 0.28;
+  tx += (mx - tx) * 0.12; ty += (my - ty) * 0.12;
+  cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+  trail.style.transform = `translate(${tx}px, ${ty}px) translate(-50%,-50%)`;
+  requestAnimationFrame(raf);
+}
+raf();
+document.querySelectorAll('[data-h]').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('lg'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('lg'));
+});
+document.querySelectorAll('.magnetic').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    el.style.transform = `translate(${x * 0.2}px, ${y * 0.25}px)`;
+  });
+  el.addEventListener('mouseleave', () => el.style.transform = '');
+});
+
+document.querySelectorAll('.tilt').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    const rX = (y - 0.5) * -6;
+    const rY = (x - 0.5) * 8;
+    el.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg)`;
+  });
+  el.addEventListener('mouseleave', () => el.style.transform = '');
+});
+
+document.querySelectorAll('.service').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+});
+
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  document.getElementById('scrollFill').style.transform = `scaleX(${p})`;
+});
+
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const lio = new IntersectionObserver((es) => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    el.querySelectorAll('span').forEach((s, i) => s.style.transitionDelay = (i * 0.04) + 's');
+    el.classList.add('in');
+    lio.unobserve(el);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.lr').forEach(el => lio.observe(el));
+
+const cio = new IntersectionObserver((es) => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.target, 10);
+    const dur = 1800, start = performance.now();
+    function tick(now) {
+      const t = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - t, 4);
+      el.textContent = Math.round(target * eased);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    cio.unobserve(el);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => cio.observe(el));
+
+function clock() {
+  const d = new Date();
+  const utc = d.getTime() + d.getTimezoneOffset() * 60000;
+  const cl = new Date(utc + (-4 * 3600000));
+  const f = n => String(n).padStart(2, '0');
+  const s = `${f(cl.getHours())}:${f(cl.getMinutes())}:${f(cl.getSeconds())}`;
+  const a = document.getElementById('clock'); if (a) a.textContent = s;
+  const b = document.getElementById('clock2'); if (b) b.textContent = s;
+}
+clock(); setInterval(clock, 1000);
+
+const sections = ['top','about','studies','numbers','cases','services','industries','stack','awards','voices','dossier','faq','contact'];
+const dots = {};
+document.querySelectorAll('#spy [data-spy]').forEach(a => { dots[a.dataset.spy] = a.querySelector('.dot'); });
+addEventListener('scroll', () => {
+  let active = 'top';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < innerHeight / 2.5) active = id;
+  });
+  Object.entries(dots).forEach(([k,v]) => v && v.classList.toggle('active', k === active));
+});
+
+const casesEl = document.getElementById('casesTrack');
+const casePrev = document.getElementById('casePrev');
+const caseNext = document.getElementById('caseNext');
+const caseSlider = document.getElementById('caseSlider');
+const caseCards = Array.from(document.querySelectorAll('#casesTrack .case'));
+let sliderActive = false;
+let sliderFrame = 0;
+function maxCaseScroll() {
+  return Math.max(0, casesEl.scrollWidth - casesEl.clientWidth);
+}
+function syncCaseSlider() {
+  if (!caseSlider || sliderActive) return;
+  caseSlider.max = String(maxCaseScroll());
+  caseSlider.value = String(Math.round(casesEl.scrollLeft));
+}
+function goCase(index) {
+  const safe = Math.max(0, Math.min(caseCards.length - 1, index));
+  const left = Math.min(caseCards[safe]?.offsetLeft || 0, maxCaseScroll());
+  casesEl.scrollTo({ left, behavior: 'smooth' });
+  if (caseSlider) caseSlider.value = String(Math.round(left));
+}
+function currentCaseIndex() {
+  if (!casesEl || !caseCards.length) return 0;
+  let nearest = 0;
+  let best = Infinity;
+  caseCards.forEach((card, index) => {
+    const distance = Math.abs(card.offsetLeft - casesEl.scrollLeft);
+    if (distance < best) { best = distance; nearest = index; }
+  });
+  return nearest;
+}
+if (caseSlider) {
+  syncCaseSlider();
+  caseSlider.addEventListener('pointerdown', () => { sliderActive = true; });
+  caseSlider.addEventListener('pointerup', () => { sliderActive = false; syncCaseSlider(); });
+  caseSlider.addEventListener('pointercancel', () => { sliderActive = false; syncCaseSlider(); });
+  caseSlider.addEventListener('change', () => { sliderActive = false; syncCaseSlider(); });
+  caseSlider.addEventListener('input', e => {
+    cancelAnimationFrame(sliderFrame);
+    const left = Number(e.target.value);
+    sliderFrame = requestAnimationFrame(() => casesEl.scrollTo({ left, behavior: 'auto' }));
+  });
+}
+casePrev?.addEventListener('click', () => goCase(currentCaseIndex() - 1));
+caseNext?.addEventListener('click', () => goCase(currentCaseIndex() + 1));
+casesEl?.addEventListener('scroll', () => {
+  requestAnimationFrame(syncCaseSlider);
+}, { passive: true });
+addEventListener('resize', syncCaseSlider);
+
+const stack = [
+  { c:'erp', n:'SAP MM' }, { c:'erp', n:'SAP PM' }, { c:'erp', n:'SAP WMS' }, { c:'erp', n:'SAP FI' }, { c:'erp', n:'SAP MMS' },
+  { c:'erp', n:'BERMAT' }, { c:'erp', n:'Bertrams' }, { c:'erp', n:'Rumba Logistics' }, { c:'erp', n:'Informat' },
+  { c:'tel', n:'Wisetrack' }, { c:'tel', n:'FuelTrack' }, { c:'tel', n:'Migtra' }, { c:'tel', n:'Guardian Seeing' }, { c:'tel', n:'Skynav' }, { c:'tel', n:'RAEV' },
+  { c:'acr', n:'SIGA' }, { c:'acr', n:'SERCOL' }, { c:'acr', n:'MyPass' }, { c:'acr', n:'LMS' }, { c:'acr', n:'SAR' }, { c:'acr', n:'DLMS' }, { c:'acr', n:'DBMS' }, { c:'acr', n:'Aureon' }, { c:'acr', n:'AIRON' },
+  { c:'iso', n:'ISO 9001' }, { c:'iso', n:'ISO 14001' }, { c:'iso', n:'ISO 45001' }, { c:'iso', n:'ISO 39001' }, { c:'iso', n:'OHSAS 18001' },
+  { c:'law', n:'Ley 16.744' }, { c:'law', n:'Ley 20.123' }, { c:'law', n:'Ley 17.798' }, { c:'law', n:'DS 132' }, { c:'law', n:'DS 160' }, { c:'law', n:'DS 148' }, { c:'law', n:'DS 594' }, { c:'law', n:'Art. 25 bis' }, { c:'law', n:'SIDREP / RESPEL' }, { c:'law', n:'PREXOR' }, { c:'law', n:'PLANESI' }, { c:'law', n:'CEAL-SM' },
+  { c:'vol', n:'Cordtex™' }, { c:'vol', n:'Exel™' }, { c:'vol', n:'Pentex™' }, { c:'vol', n:'EBS' }, { c:'vol', n:'4D' }, { c:'vol', n:'WebGen' }, { c:'vol', n:'RHINO' }
+];
+const sGrid = document.getElementById('stackGrid');
+function renderStack(f) {
+  const list = f === 'all' ? stack : stack.filter(s => s.c === f);
+  sGrid.innerHTML = list.map((s, i) => `
+    <div class="lift glass rounded-2xl p-4 text-center" style="animation: capIn .4s ${i*0.02}s both" data-h>
+      <div class="display text-base lg:text-lg">${s.n}</div>
+      <div class="text-[9px] tracking-widest uppercase text-fg-3 mt-1">${s.c.toUpperCase()}</div>
+    </div>
+  `).join('');
+  sGrid.querySelectorAll('[data-h]').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('lg'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('lg'));
+  });
+}
+const stStyle = document.createElement('style');
+stStyle.textContent = '@keyframes capIn { from { opacity:0; transform: translateY(8px) } to { opacity:1; transform: none } }';
+document.head.appendChild(stStyle);
+renderStack('all');
+document.querySelectorAll('#stackFilters .chip-st').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('#stackFilters .chip-st').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    renderStack(b.dataset.f);
+  });
+});
+
+const toast = document.getElementById('toast');
+function showToast(m) {
+  toast.textContent = m;
+  toast.style.opacity = '1'; toast.style.transform = 'translate(-50%, 0)';
+  setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translate(-50%, 12px)'; }, 1800);
+}
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.dataset.copy).then(() => showToast('Copiado: ' + btn.dataset.copy));
+  });
+});
+
+document.getElementById('hireBtnCta').addEventListener('click', () => {
+  location.href = 'mailto:yamirrojo2017@gmail.com?subject=Propuesta%20de%20contrato%20-%20Director%20de%20Operaciones&body=Estimado%20Yamir%2C%0A%0AHemos%20revisado%20su%20portafolio%20y%20nos%20gustar%C3%ADa%20conversar%20sobre%20una%20posici%C3%B3n%20estrat%C3%A9gica%20en%20nuestra%20organizaci%C3%B3n.%0A%0ASaludos%2C';
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' }); }
+  });
+});
+
+const heroH1 = document.querySelector('h1.display');
+if (heroH1) {
+  const chars = '!<>-_\\/[]{}—=+*^?#';
+  const spans = heroH1.querySelectorAll('span span');
+  spans.forEach(span => {
+    const orig = span.textContent;
+    span.addEventListener('mouseenter', () => {
+      let i = 0;
+      const iv = setInterval(() => {
+        span.textContent = chars[Math.floor(Math.random() * chars.length)];
+        if (++i > 4) { clearInterval(iv); span.textContent = orig; }
+      }, 30);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
