@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#0a0a0c" />
+<meta name="theme-color" content="#1e2435" />
 <title>Yamir Moisés Rojo Andrade — Portafolio Profesional · Operaciones, Logística Minera y Supply Chain</title>
 <meta name="description" content="Portafolio profesional de Yamir Moisés Rojo Andrade: Gerencia de Operaciones, Logística Minera, Supply Chain y Seguridad Operacional para empresas y reclutantes." />
 <link rel="icon" type="image/png" href="favicon.png?v=3" />
@@ -13,10 +13,10 @@
     theme: {
       extend: {
         colors: {
-          bg:     { DEFAULT:'#181a20', soft:'#20232b', card:'#272b35', hi:'#343946' },
-          line:   'rgba(255,255,255,0.08)',
-          line2:  'rgba(255,255,255,0.14)',
-          fg:     { DEFAULT:'#fafaf7', 2:'#c5c5b8', 3:'#7a7a6e', 4:'#4a4a44' },
+          bg:     { DEFAULT:'#253352', soft:'#2d3d62', card:'#354870', hi:'#3e527e' },
+          line:   'rgba(255,255,255,0.13)',
+          line2:  'rgba(255,255,255,0.22)',
+          fg:     { DEFAULT:'#f2f2ed', 2:'#ccccbf', 3:'#9898a8', 4:'#6a6a78' },
           amber:  { DEFAULT:'#ff7849', soft:'#ff9669', deep:'#e0561f', glow:'rgba(255,120,73,0.35)', tint:'rgba(255,120,73,0.10)' },
           gold:   '#d4af37',
           mint:   '#5eead4'
@@ -32,15 +32,16 @@
 </script>
 <style>
   :root {
-    --bg: #181a20;
-    --bg-soft: #20232b;
-    --bg-card: #272b35;
-    --bg-hi: #343946;
-    --fg: #fafaf7;
-    --fg-2: #c5c5b8;
-    --fg-3: #7a7a6e;
-    --line: rgba(255,255,255,0.08);
-    --line2: rgba(255,255,255,0.14);
+    --bg: #253352;
+    --bg-soft: #2d3d62;
+    --bg-card: #354870;
+    --bg-hi: #3e527e;
+    --fg: #f2f2ed;
+    --fg-2: #ccccbf;
+    --fg-3: #9898a8;
+    --fg-4: #6a6a78;
+    --line: rgba(255,255,255,0.13);
+    --line2: rgba(255,255,255,0.22);
     --amber: #ff7849;
     --amber-soft: #ff9669;
     --amber-deep: #e0561f;
@@ -64,12 +65,12 @@
   @media (hover: none), (pointer: coarse) { body { cursor: auto; } #cursor, #cursor-trail { display: none !important; } }
 
   .mesh {
-    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.82;
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.70;
     background:
-      radial-gradient(ellipse 60% 50% at 15% 20%, rgba(255,120,73,0.20), transparent 60%),
-      radial-gradient(ellipse 50% 60% at 85% 80%, rgba(94,234,212,0.13), transparent 60%),
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,120,73,0.12), transparent 60%),
-      radial-gradient(ellipse 65% 45% at 70% 25%, rgba(255,255,255,0.07), transparent 65%);
+      radial-gradient(ellipse 60% 50% at 15% 20%, rgba(255,120,73,0.16), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 85% 80%, rgba(94,234,212,0.10), transparent 60%),
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,120,73,0.09), transparent 60%),
+      radial-gradient(ellipse 65% 45% at 70% 25%, rgba(255,255,255,0.05), transparent 65%);
   }
   .stellar {
     position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 1;
@@ -92,8 +93,8 @@
   }
   .grain::before {
     content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    mix-blend-mode: overlay; opacity: 0.6;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.025 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode: overlay; opacity: 0.4;
   }
 
   #loader { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; align-items: center; justify-content: center; transition: opacity .6s ease, transform .6s ease; }
@@ -132,9 +133,9 @@
   @keyframes spin-slow { to { transform: rotate(360deg); } }
   .spin-slow { animation: spin-slow 40s linear infinite; transform-origin: 50% 50%; }
 
-  .glass { background: rgba(24,26,32,0.28); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.10); }
+  .glass { background: rgba(30,36,53,0.55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); }
   .glass:hover { border-color: var(--line2); }
-  .bg-bg, .bg-bg-soft, .bg-bg-card { background-color: rgba(24,26,32,0.18) !important; }
+  .bg-bg, .bg-bg-soft, .bg-bg-card { background-color: rgba(30,36,53,0.40) !important; }
 
   .tilt { transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s; transform-style: preserve-3d; }
 
@@ -186,8 +187,8 @@
   details.faq .answer { padding: 0 0 24px 0; color: var(--fg-2); }
 
   .stat-num { background: linear-gradient(180deg, #ffffff 0%, var(--amber-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .metric-panel { background: rgba(8,9,12,0.72) !important; }
-  .metric-panel > div { background: rgba(8,9,12,0.66) !important; }
+  .metric-panel { background: rgba(20,25,42,0.80) !important; }
+  .metric-panel > div { background: rgba(20,25,42,0.70) !important; }
 
   ::selection { background: var(--amber); color: var(--bg); }
 
@@ -205,7 +206,7 @@
   .gold-star { color:#ffd166; filter: drop-shadow(0 0 16px rgba(255,209,102,.45)); }
   .distinction-line { display: inline-flex; align-items: center; gap: .65rem; margin-top: .8rem; color: #ffd166; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
   .distinction-line .gold-star { font-size: 1.55rem; line-height: 1; }
-  .industry-card { background: rgba(255,255,255,0.025); border: 1px solid var(--line); }
+  .industry-card { background: rgba(255,255,255,0.045); border: 1px solid var(--line2); }
   .industry-card svg { width: 72px; height: 72px; margin: auto; opacity:.95; filter: drop-shadow(0 0 20px var(--amber-glow)); }
   .industry-card > div:first-child { flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 8rem; }
   .industry-card > div:first-child span { align-self: flex-start; }
@@ -223,26 +224,86 @@
   .sh-num { font-family: 'Hoefler Text', serif; font-style: italic; color: var(--fg-4); }
 
 
+  /* Mobile nav overlay */
+  #mobileNav { transition: opacity .3s ease, transform .3s ease; }
+  #mobileNav.hidden { display: none !important; }
+  #mobileNav.open { display: flex !important; opacity: 1; transform: none; }
+  #hamburger span { display: block; width: 20px; height: 1.5px; background: currentColor; transition: transform .25s, opacity .25s; transform-origin: center; }
+  #hamburger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+  #hamburger.open span:nth-child(2) { opacity: 0; }
+  #hamburger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+  /* ─── Tablet (≤ 768px) ────────────────────────────────── */
   @media (max-width: 768px) {
     section { scroll-margin-top: 72px; }
+    section:not(#top) { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+
     .glass { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-    .case { width: min(88vw, 460px); }
-    .case { padding: 1.5rem; }
-    .case h3 { overflow-wrap: anywhere; }
+
+    /* Cases */
+    .case { width: min(88vw, 460px); padding: 1.5rem; }
+    .case h3 { overflow-wrap: anywhere; font-size: 1.85rem !important; line-height: 1.1; }
+    .case .grid.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .copy-label, .break-all { overflow-wrap: anywhere; }
     .sn { letter-spacing: 0.18em; }
-    #casesTrack { padding-inline: 1.25rem; }
-    object[type="application/pdf"] { min-height: 520px; }
+    #casesTrack { padding-inline: 1.25rem; touch-action: pan-x; }
+
+    /* PDF */
+    object[type="application/pdf"] { height: 60vh; min-height: 260px; }
+
+    /* FAQ */
+    details.faq summary { cursor: pointer; }
+
+    /* Typography */
+    .display.text-7xl { font-size: 3.25rem !important; }
+    .display.text-6xl { font-size: 2.75rem !important; }
+    .display.text-5xl { font-size: 2.25rem !important; }
+    .display.text-4xl { font-size: 1.85rem !important; }
+    .display.text-3xl { font-size: 1.65rem !important; }
+
+    /* Hero stat cells: tighter */
+    .grid.grid-cols-2.lg\:grid-cols-4 .p-6,
+    .grid.grid-cols-2.lg\:grid-cols-4 .p-7 { padding: 1rem 1.25rem; }
+
+    /* Remove sticky: single-column layout */
+    .sticky { position: relative !important; top: auto !important; }
+
+    /* Reduce grain (performance) */
+    .grain::before { opacity: 0.15; }
+
+    /* Service card padding */
+    .service { padding: 1.5rem; }
   }
 
+  /* ─── Small phones (≤ 480px) ─────────────────────────── */
   @media (max-width: 480px) {
-    nav .glass { height: auto; min-height: 56px; border-radius: 24px; padding: 0.5rem; }
-    .display.text-6xl { font-size: 3rem !important; }
-    .display.text-5xl { font-size: 2.65rem !important; }
-    .text-\[120px\] { font-size: 5.4rem !important; }
-    .text-\[14vw\] { font-size: clamp(2.85rem, 13vw, 4rem) !important; }
+    nav .glass { height: auto; min-height: 56px; border-radius: 24px; padding: 0.4rem 0.75rem; }
+    nav { inset-inline: 0.5rem; }
+
+    .display.text-6xl { font-size: 2.5rem !important; }
+    .display.text-5xl { font-size: 2.1rem !important; }
+    .display.text-4xl { font-size: 1.75rem !important; }
+    .display.text-3xl { font-size: 1.5rem !important; }
+    .text-\[120px\] { font-size: 4.5rem !important; }
+    .text-\[14vw\] { font-size: clamp(2.4rem, 11.5vw, 3.25rem) !important; }
+
+    /* Only collapse truly 3-col grids */
     .grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
-    .grid.grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+
+    /* Hero CTA stack */
+    section#top .flex.flex-wrap.gap-3 { flex-direction: column; align-items: stretch; }
+    section#top .flex.flex-wrap.gap-3 a { justify-content: center; }
+
+    /* Tighter hero top */
+    section#top { padding-top: 4.5rem !important; }
+  }
+
+  /* ─── iPhone SE / tiny (≤ 375px) ─────────────────────── */
+  @media (max-width: 375px) {
+    nav { inset-inline: 0.25rem; top: 0.25rem; }
+    .text-\[14vw\] { font-size: clamp(2rem, 11vw, 2.75rem) !important; }
+    section { padding-inline: 0.875rem !important; }
+    .case { width: 92vw; }
   }
 </style>
 </head>
@@ -296,9 +357,28 @@
         Contratar
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
+      <button id="hamburger" class="xl:hidden flex flex-col items-center justify-center gap-[4px] w-10 h-10 rounded-full border border-line text-fg ml-1" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- Mobile nav overlay -->
+<div id="mobileNav" class="hidden fixed inset-0 z-[58] flex-col items-center justify-center" style="background:rgba(25,33,55,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);">
+  <nav class="flex flex-col items-center gap-6 text-center">
+    <a href="#about"     class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Acerca</a>
+    <a href="#studies"   class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Estudios</a>
+    <a href="#cases"     class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Casos</a>
+    <a href="#services"  class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Servicios</a>
+    <a href="#stack"     class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Stack</a>
+    <a href="#voices"    class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Referencias</a>
+    <a href="#dossier"   class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">PDF</a>
+    <a href="#faq"       class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">FAQ</a>
+    <a href="#contact"   class="display text-4xl italic-d text-fg hover:text-amber transition nav-m-link">Contacto</a>
+  </nav>
+  <div class="absolute bottom-10 text-[10px] tracking-[0.3em] uppercase text-fg-3">Yamir M. Rojo · Chile</div>
+</div>
 
 <div class="hidden xl:flex fixed right-8 top-1/2 -translate-y-1/2 z-50 flex-col items-end gap-3" id="spy">
   <a href="#top"     data-spy="top"     class="group flex items-center gap-3" data-h><span class="text-[9px] tracking-widest uppercase text-fg-3 opacity-0 group-hover:opacity-100 transition">Inicio</span><span class="dot"></span></a>
@@ -318,6 +398,39 @@
 
 <section id="top" class="relative min-h-screen flex flex-col justify-center pt-28 pb-20 px-5 lg:px-10 overflow-hidden">
   <div class="max-w-[1400px] mx-auto w-full relative">
+
+    <!-- Profile photo · editorial press card · top-right -->
+    <div class="hidden lg:block absolute right-0 top-0 z-[3]" style="width:clamp(220px,24vw,340px);">
+      <div class="relative overflow-hidden rounded-md group" style="aspect-ratio:3/4;box-shadow:0 24px 60px -20px rgba(0,0,0,0.55),0 0 0 1px var(--line2);">
+        <img src="profile.png" alt="Yamir Moisés Rojo Andrade en operación · Salar de Atacama" loading="eager" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1600ms] group-hover:scale-[1.05]" style="object-position:center 22%;" />
+        <!-- bottom gradient for caption legibility -->
+        <div class="absolute inset-x-0 bottom-0 pointer-events-none" style="height:62%;background:linear-gradient(to top,rgba(15,22,40,0.96) 0%,rgba(15,22,40,0.55) 38%,transparent 100%);"></div>
+        <!-- top gradient for status legibility -->
+        <div class="absolute inset-x-0 top-0 pointer-events-none" style="height:24%;background:linear-gradient(to bottom,rgba(15,22,40,0.55),transparent);"></div>
+        <!-- amber corner brackets (editorial) -->
+        <div class="absolute top-2.5 right-2.5 pointer-events-none">
+          <span class="block w-5 h-px bg-amber"></span>
+          <span class="block w-px h-5 bg-amber absolute top-0 right-0"></span>
+        </div>
+        <div class="absolute bottom-2.5 left-2.5 pointer-events-none">
+          <span class="block w-5 h-px bg-amber absolute bottom-0 left-0"></span>
+          <span class="block w-px h-5 bg-amber"></span>
+        </div>
+        <!-- top status chip -->
+        <div class="absolute top-3 left-3 flex items-center gap-1.5 pointer-events-none">
+          <span class="w-1.5 h-1.5 rounded-full bg-mint available-dot"></span>
+          <span class="text-[8.5px] tracking-[0.32em] uppercase text-fg font-medium" style="text-shadow:0 1px 6px rgba(0,0,0,0.85);">En operación</span>
+        </div>
+        <!-- caption -->
+        <div class="absolute bottom-3.5 left-3.5 right-3.5 pointer-events-none">
+          <div class="text-[8.5px] tracking-[0.28em] uppercase text-amber font-semibold">Líder Operaciones Planta</div>
+          <div class="display text-[17px] leading-tight text-fg mt-1.5">Yamir M. Rojo</div>
+          <div class="flex items-center gap-2 mt-2 text-[8.5px] tracking-[0.22em] uppercase text-fg-2">
+            <span>SQM</span><span class="w-1 h-1 rounded-full bg-amber"></span><span>Atacama</span><span class="w-1 h-1 rounded-full bg-amber"></span><span>Chile</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="flex items-center gap-3 mb-10 reveal">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-[10px] tracking-[0.25em] uppercase">
@@ -380,13 +493,6 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex absolute bottom-2 right-10 items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-fg-3">
-      Desplazar
-      <svg width="14" height="40" viewBox="0 0 14 40" fill="none">
-        <rect x="0.5" y="0.5" width="13" height="39" rx="6.5" stroke="currentColor" stroke-opacity="0.4"/>
-        <circle cx="7" cy="10" r="2" fill="currentColor"><animate attributeName="cy" values="10;30;10" dur="2s" repeatCount="indefinite"/></circle>
-      </svg>
-    </div>
   </div>
 
   <div class="absolute bottom-0 inset-x-0 marquee overflow-hidden py-3 bg-bg/60 backdrop-blur">
@@ -1574,13 +1680,22 @@ document.querySelectorAll('[data-age]').forEach(el => {
 
 const cursor = document.getElementById('cursor');
 const trail = document.getElementById('cursor-trail');
-let mx=0, my=0, cx=0, cy=0, tx=0, ty=0;
-addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+let mx=0, my=0, tx=0, ty=0;
+const moveC = e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
+};
+window.addEventListener('pointermove', moveC);
+document.addEventListener('pointermove', moveC);
+document.addEventListener('mouseleave', () => { cursor.style.opacity='0'; trail.style.opacity='0'; });
+document.addEventListener('mouseenter', () => { cursor.style.opacity='1'; trail.style.opacity='0.55'; });
+document.querySelectorAll('object,iframe,embed').forEach(el => {
+  el.addEventListener('mouseover', () => { cursor.style.opacity='0'; trail.style.opacity='0'; });
+  el.addEventListener('mouseout',  () => { cursor.style.opacity='1'; trail.style.opacity='0.55'; });
+});
 function raf() {
-  cx += (mx - cx) * 0.28; cy += (my - cy) * 0.28;
-  tx += (mx - tx) * 0.12; ty += (my - ty) * 0.12;
-  cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
-  trail.style.transform = `translate(${tx}px, ${ty}px) translate(-50%,-50%)`;
+  tx += (mx - tx) * 0.18; ty += (my - ty) * 0.18;
+  trail.style.transform = `translate(${tx}px,${ty}px) translate(-50%,-50%)`;
   requestAnimationFrame(raf);
 }
 raf();
@@ -1775,6 +1890,24 @@ function showToast(m) {
 document.querySelectorAll('.copy-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     navigator.clipboard.writeText(btn.dataset.copy).then(() => showToast('Copiado: ' + btn.dataset.copy));
+  });
+});
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger?.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('hidden', !open);
+  mobileNav.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.querySelectorAll('.nav-m-link').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.add('hidden');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
   });
 });
 
