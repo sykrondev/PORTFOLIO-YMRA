@@ -1,0 +1,33 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+import Icon from '../Icon.astro';
+---
+<section id="propuestas" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.propositionsEyebrow}
+      eyebrowEn={en.ui.sections.propositionsEyebrow}
+      titleEs={es.ui.sections.propositionsTitle}
+      titleEn={en.ui.sections.propositionsTitle}
+    />
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {es.propositions.map((p, i) => (
+        <article class="surface surface-hover rounded-2xl p-5">
+          <div class="icon-badge inline-flex items-center justify-center h-11 w-11 rounded-xl bg-gold-600/15 text-gold-400 border border-gold-600/25">
+            <Icon name={p.icon} />
+          </div>
+          <h3 class="mt-4 font-semibold text-white text-base leading-snug">
+            <span data-lang-only="es">{p.title}</span>
+            <span data-lang-only="en">{en.propositions[i].title}</span>
+          </h3>
+          <p class="mt-2 text-sm text-body leading-relaxed">
+            <span data-lang-only="es">{p.description}</span>
+            <span data-lang-only="en">{en.propositions[i].description}</span>
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

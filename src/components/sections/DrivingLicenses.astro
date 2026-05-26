@@ -1,0 +1,43 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+---
+<section id="licencias" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.licensesEyebrow}
+      eyebrowEn={en.ui.sections.licensesEyebrow}
+      titleEs={es.ui.sections.licensesTitle}
+      titleEn={en.ui.sections.licensesTitle}
+    />
+
+    <div class="mt-10 grid sm:grid-cols-2 gap-4 max-w-4xl">
+      {es.drivingLicenses.map((license, i) => (
+        <article class="surface surface-hover rounded-2xl p-5 md:p-6">
+          <div class="flex items-start gap-3">
+            <span class="icon-badge inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-exec-blue/15 border border-exec-blue/30 text-exec-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                <circle cx="7" cy="17" r="2" />
+                <path d="M9 17h6" />
+                <circle cx="17" cy="17" r="2" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="text-base md:text-lg font-bold text-white">
+                <span data-lang-only="es">{license.license}</span>
+                <span data-lang-only="en">{en.drivingLicenses[i].license}</span>
+              </h3>
+              <p class="mt-2 text-sm text-body leading-relaxed">
+                <span data-lang-only="es">{license.description}</span>
+                <span data-lang-only="en">{en.drivingLicenses[i].description}</span>
+              </p>
+              <p class="mt-2 text-xs uppercase tracking-widest text-gold-400 font-semibold">SERCAEM</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

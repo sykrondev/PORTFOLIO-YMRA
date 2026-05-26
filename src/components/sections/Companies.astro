@@ -1,0 +1,22 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import { CompanyMarquee } from '../react/CompanyMarquee';
+import { RopeFrame } from '../react/RopeFrame';
+---
+<section class="!py-12 relative">
+  <div class="container-x">
+    <p class="text-center text-xs uppercase tracking-[0.22em] text-white/55 font-semibold mb-5">
+      <span data-lang-only="es">{es.ui.sections.companiesTitle}</span>
+      <span data-lang-only="en">{en.ui.sections.companiesTitle}</span>
+    </p>
+    <div class="companies-band-wrap">
+      <RopeFrame client:load />
+      <div class="companies-band-shell">
+        <div class="companies-band-core">
+          <CompanyMarquee client:visible variant="band" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

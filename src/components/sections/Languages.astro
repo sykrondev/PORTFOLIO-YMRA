@@ -1,0 +1,38 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+---
+<section class="section !py-14 scroll-mt relative">
+  <div class="container-x relative z-10">
+    <div class="surface rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <p class="eyebrow">
+          <span data-lang-only="es">{es.ui.labels.languagesIntro}</span>
+          <span data-lang-only="en">{en.ui.labels.languagesIntro}</span>
+        </p>
+        <h2 class="mt-2 text-2xl md:text-3xl font-bold text-white tracking-tight">
+          <span data-lang-only="es">{es.ui.sections.languagesTitle}</span>
+          <span data-lang-only="en">{en.ui.sections.languagesTitle}</span>
+        </h2>
+      </div>
+      <ul class="space-y-2 text-body text-sm">
+        {es.languages.map((l, i) => (
+          <li class="flex gap-2">
+            <span class="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-gold-500 shrink-0"></span>
+            <span>
+              <span data-lang-only="es">{l}</span>
+              <span data-lang-only="en">{en.languages[i]}</span>
+            </span>
+          </li>
+        ))}
+        <li class="flex gap-2 pt-2 border-t border-white/10 mt-3 font-semibold text-white">
+          <span class="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-exec-green shrink-0"></span>
+          <span>
+            <span data-lang-only="es">{es.ui.labels.availability}</span>
+            <span data-lang-only="en">{en.ui.labels.availability}</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

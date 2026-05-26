@@ -1,0 +1,58 @@
+---
+import '../styles/globals.css';
+import { site } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.title, description = site.description } = Astro.props;
+const ogImage = new URL(site.ogImage, Astro.site ?? 'http://localhost:4321').toString();
+---
+<!DOCTYPE html>
+<html lang="es" id="html-root" data-lang="es" data-theme="dark" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={site.keywords.join(', ')} />
+    <meta name="author" content={site.name} />
+    <meta name="theme-color" content="#0b1530" />
+    <link rel="canonical" href={Astro.site} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script is:inline>
+      try {
+        const lang = localStorage.getItem('lang') || 'es';
+        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.dataset.lang = lang;
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="bg-[#04070f] text-white/85 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-gold-600 focus:text-navy-950 focus:rounded font-semibold">
+      Saltar al contenido
+    </a>
+    <slot name="bg" />
+    <div id="site-root">
+      <slot />
+    </div>
+  </body>
+</html>

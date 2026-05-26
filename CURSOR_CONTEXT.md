@@ -1,0 +1,300 @@
+# Cursor Agent Context — Portafolio Yamir Moisés Rojo Andrade
+
+Read this file fully before making changes. It captures stack, conventions, file map, current state, gotchas, and pending work.
+
+---
+
+## 1. Project summary
+
+- **Goal:** Single-page executive portfolio for Yamir Moisés Rojo Andrade (Head of Operations, Logistics & Supply Chain — large-scale mining, Chile).
+- **Source of truth (content):** `CV YAMIR MOISÉS ROJO ANDRADE MAESTRO.pdf` (web copy) and `CV YAMIR MOISÉS ROJO ANDRADE EJECUTIVO.pdf` (the **only** downloadable PDF, served from `public/documents/cv-yamir-moises-rojo-andrade.pdf` (download as `CV Yamir Moisés Rojo Andrade.pdf`)). The Maestro PDF is **never** published / linked.
+- **Editorial rule:** Do **not** invent companies, dates, metrics, certifications, or recognitions. Everything visible on the site must trace back to one of the two PDFs.
+- **Languages:** Bilingual ES (default) / EN, both languages rendered into the DOM, toggled at runtime via `html[data-lang]` + CSS `[data-lang-only]` filters. No `/en` route.
+- **Themes:** `dark` (night sky + stars with subtle lateral animated math formulas, default) and `light` (paper-first technical background with parchment tone, faint blueprint support, and visible handwritten-ink math overlay). Toggle persists in `localStorage.theme`.
+- **Deployment:** Local only for now. Static-friendly (no SSR endpoints). Future target: GitHub Pages on `yamirrojo.com`.
+- **Plan reference:** `PLAN-PORTAFOLIO-YAMIR-ROJO-ANDRADE.md` (do **not** edit). Read it for the original product spec; current code has diverged on several points (see §8).
+
+---
+
+## 2. Stack
+
+| Layer | Choice |
+|-------|--------|
+| Framework | Astro 5 (`^5.1.0`, currently `5.18.1`) static |
+| UI islands | React 18 via `@astrojs/react` (`client:load` / `client:visible`) |
+| Styling | Tailwind CSS 3 via `@astrojs/tailwind` (with `applyBaseStyles: false`) |
+| Motion | `motion` (`motion/react`) — used in Hero portrait transitions only |
+| Fonts | `@fontsource/manrope` (400/500/600/700/800) |
+| Lang | TypeScript strict (`astro/tsconfigs/strict`), JSX react-jsx |
+| Node | v24.x (developer environment) |
+
+`astro.config.mjs` sets `server.port = 4321`, `host: true`, `site: 'https://yamirrojo.com'`. Tailwind config (`tailwind.config.mjs`) extends colors `navy`, `gold`, `graphite`, `exec.blue`, `exec.green`, `Manrope` font family, grain background. Component classes (`.glass`, `.glass-strong`, `.surface`, `.surface-hover`, `.btn-primary`, `.btn-ghost`, `.btn-outline`, `.section`, `.section-title`, `.eyebrow`, `.text-body`, `.text-muted`, `.container-x`, `.scroll-mt`, `.marquee`) live in `src/styles/globals.css`.
+
+---
+
+## 3. File map
+
+```
+.
+├── PLAN-PORTAFOLIO-YAMIR-ROJO-ANDRADE.md    # original plan — DO NOT EDIT
+├── CURSOR_CONTEXT.md                        # this file
+├── CV YAMIR MOISÉS ROJO ANDRADE MAESTRO.pdf   # content source ONLY (never published)
+├── CV YAMIR MOISÉS ROJO ANDRADE EJECUTIVO.pdf # source for public PDF
+├── Fto perfil profesional.png               # current canonical profile photo
+├── Hombre en el desierto vasto.png
+├── Hombre en obra industrial al sol 2008.png
+├── Recibiendo diploma máxima distinción Santiago 2026.jpeg
+├── Revisión de documentos en oficina de obra.png
+├── astro.config.mjs
+├── tailwind.config.mjs
+├── tsconfig.json
+├── package.json
+└── public/
+│   ├── favicon.svg                          # YR monogram, navy + gold
+│   ├── og-image.jpg                         # copy of profile photo
+│   ├── documents/cv-yamir-moises-rojo-andrade.pdf  # ONLY public PDF
+│   ├── images/
+│   │   ├── profile.jpg                      # hero portrait 1 (Ejecutivo)
+│   │   ├── hero-desert.jpg                  # hero portrait 2 (En operación)
+│   │   ├── hero-industrial-2008.jpg         # hero portrait 3 (Obra 2008)
+│   │   └── portfolio/
+│   │       ├── diploma-distincion-2026.jpg  # Formación section figure
+│   │       └── oficina-obra.jpg             # Perfil section figure
+│   │   └── gallery/                         # ~44 professional photos (+ thumbs/)
+│   └── logos/                               # light + dark PNGs API (process:logos)
+│       └── dark/                            # dark-theme wordmarks (/logos/dark/{slug}.png)
+└── src/
+    ├── pages/index.astro                    # the only route
+    ├── layouts/BaseLayout.astro             # SEO, OG, inline lang/theme bootstrap
+    ├── styles/globals.css                   # Tailwind layers + components + light-theme overrides + a11y/print
+    ├── config/site.ts                       # name, contact, phone, WhatsApp URL, LinkedIn placeholder, keywords, calcAge()
+    ├── content/
+    │   ├── types.ts                         # full UICopy / Content types
+    │   ├── es.ts                            # Spanish content (source of truth for site copy)
+    │   ├── en.ts                            # English mirror — keep array indexes aligned with es.ts
+    │   ├── gallery.manifest.json            # generated by npm run process:gallery (paths + ES captions)
+    │   ├── gallery.en.ts                    # EN captions index-aligned with manifest
+    │   ├── gallery.ts                       # getGalleryItems / getGalleryItemById
+    │   └── index.ts                         # exports { content, Lang }
+    ├── lib/
+    │   ├── lang.ts                          # getLang / setLang / onLangChange (CustomEvent)
+    │   ├── useLang.ts                       # React hook subscribing to lang events
+    │   ├── theme.ts                         # getTheme / setTheme / onThemeChange
+    │   └── useTheme.ts                      # React hook for theme
+    ├── components/
+    │   ├── SectionTitle.astro               # eyebrow + h2 (both ES & EN spans)
+    │   ├── Icon.astro                       # SVG icon set used by Propositions
+    │   ├── sections/
+    │   │   ├── Companies.astro              # CompanyMarquee island
+    │   │   ├── Profile.astro                # Perfil + oficina-obra figure
+    │   │   ├── Propositions.astro           # 8 cards with Icon.astro icons
+    │   │   ├── Results.astro                # ~38 metric cards
+    │   │   ├── Experience.astro             # ExperienceTimeline island
+    │   │   ├── Gallery.astro                # GalleryCarousel island (48-photo carousel)
+    │   │   ├── SectionGallerySpotlight.astro # single gallery photo row (left/right on md+)
+    │   │   ├── Education.astro              # cards + diploma figure + optional recognition badge per card
+    │   │   ├── DrivingLicenses.astro        # SERCAEM A-2 / D licenses (not mixed with certs)
+    │   │   ├── Certifications.astro         # CertificationAccordion island (grid)
+    │   │   ├── Tools.astro                  # ToolsAccordion island (grid)
+    │   │   ├── Cv.astro                     # CV section (title + download/open buttons; no iframe)
+    │   │   ├── Languages.astro              # idiomas + disponibilidad
+    │   │   ├── Contact.astro                # mailto / tel / WhatsApp / LinkedIn placeholder
+    │   │   └── Footer.astro                 # YR badge, keywords list, copyright
+    │   └── react/
+    │       ├── Background.tsx               # picks StarsBackground or DayBackground per theme
+    │       ├── StarsBackground.tsx          # canvas: dark or light variant via prop
+    │       ├── DayBackground.tsx            # canvas: blueprint grid + slow technical markers (light theme)
+    │       ├── Header.tsx                   # glass nav pill; desktop navShort at xl+; theme icon-only; ES/EN toggle
+    │       ├── Hero.tsx                     # split layout, portrait switcher, MetricCounter island
+    │       ├── MetricCounter.tsx            # IntersectionObserver counter, reduced-motion aware
+    │       ├── CompanyMarquee.tsx           # infinite-scroll company chips (PNG logo or text-only name chip)
+    │       ├── ExperienceTimeline.tsx       # vertical gold-dot timeline + collapsible detail
+    │       ├── GalleryCarousel.tsx          # linear carousel, keyboard nav, visible caption
+    │       ├── EducationRichText.tsx          # multi-phrase glow in education copy (academic + subtle Magna)
+    │       ├── CategoryIcons.tsx            # 10 SVG icons + per-card accents array
+    │       ├── ToolsAccordion.tsx           # grid cards, icon + per-card accent (no real accordion)
+    │       ├── CertificationAccordion.tsx   # grid cards, same pattern as Tools
+    │       ├── Accordion.tsx                # legacy collapsible — currently UNUSED
+    │       ├── CvViewer.tsx                 # legacy modal — currently UNUSED (CV is its own section now)
+    │       └── BackToTop.tsx
+```
+
+---
+
+## 4. Runtime conventions
+
+### Bilingual content rendering
+- Every section emits **both** languages in the same DOM, each variant wrapped with `data-lang-only="es"` or `data-lang-only="en"`.
+- `globals.css` hides the inactive one via `html[data-lang="…"] [data-lang-only="…"] { display: none !important }`.
+- Inline `<script is:inline>` in `BaseLayout.astro` reads `localStorage.lang` and `localStorage.theme` and sets `html[lang]` + `html[data-theme]` **before hydration** to avoid flash. SSR defaults on `<html>`: `data-lang="es"` + `data-theme="dark"` for first paint; returning visitors restore saved prefs.
+- React islands consume the active language via `useLang()` (subscribes to a `lang:change` CustomEvent dispatched by `lib/lang.ts setLang()`). They render only the active language’s string, but pure-Astro sections render both spans. Keep both code paths in sync.
+- Content types in `types.ts`: `EducationItem.recognition` (optional badge block in Formación), `EducationItem.logo` (optional institution slug: `unab`, `ejercito-chile`), `drivingLicenses`, optional `Result.featured` for highlighted recognition cards, `CompanyRef` (`slug` + `name` + optional `textOnly?: true`) for marquee logos/chips, optional `ExperienceItem.logos` (slug array; text-only slugs render as name chips).
+- Gestión de Personas y Cambio Organizacional is an `education[]` card with separate `recognition` field, not its own section. Licencias SERCAEM in `#licencias`, not in certifications.
+- When adding new copy: add to **both** `src/content/es.ts` and `src/content/en.ts`, keeping array indexes aligned (the Education section, for example, looks up `en.education[i].title` by index).
+
+### Theme system
+- `html[data-theme="dark"]` is default; dark mode now renders `StarsBackground.tsx` plus a cool-toned `MathBackground.tsx` overlay restricted to the left/right reading margins. `light` uses a paper-first stack: parchment-style `DayBackground.tsx` as the static base plus `MathBackground.tsx` as the visible ink overlay, then the **override block** in `globals.css`.
+- Light theme: warm paper base `#f4ecde`, navy/gold accents, cream glass cards with reduced opacity so the background can read through. Magna Cum Laude uses `.glow-magna-subtle` (no neon animation). The blueprint is now deliberately secondary to the ink layer.
+- Light overrides are pragmatic — they flip `text-white/X`, `border-white/X`, `bg-white/X`, `bg-navy-900/X`, `.glass`, `.surface`, etc. If you add a new utility class involving `text-white/*` or `bg-navy-*` opacity, **add the corresponding light override** or contrast will break in day mode.
+- Theme toggle in `Header.tsx`: sun/moon icon only (state in `aria-label` / `title`). Desktop nav uses `ui.navShort` from `xl` with `title={ui.nav.*}` tooltips; mobile menu keeps full `ui.nav` labels.
+
+### Backgrounds
+- `Background.tsx` is mounted in `pages/index.astro` via `slot="bg"` (rendered before `#site-root`).
+- In dark mode it renders `StarsBackground` plus `MathBackground`; in light mode it renders both `DayBackground` and `MathBackground`. The wrappers are fixed, pointer-safe, and layered explicitly in `globals.css`: base background at `z-index: 0`, `#math-bg` above it, then `#site-root` above both.
+- `DayBackground.tsx` is now static paper/blueprint texture; `MathBackground.tsx` handles the animated writing in both themes and is intentionally constrained to the lateral margins so it never occupies the central reading band.
+- `prefers-reduced-motion` keeps the light-mode paper + ink visible as a static composition instead of hiding the canvases outright.
+
+### Hero portrait
+- Three-image switcher (`profile.jpg` / `hero-desert.jpg` / `hero-industrial-2008.jpg`).
+- The current UI is a **single button** below the picture labelled `Cambiar foto` / `Change photo` with “n / 3” indicator, **not** the originally-planned dot row.
+
+### Professional gallery (`#galeria`)
+- Section after Experience. `GalleryCarousel.tsx`: linear carousel; transparent media (no surface box), natural image aspect ratio, centered `figcaption`; prev/next + keyboard; counter. No filters/lightbox.
+
+### Gallery spotlights (section photos)
+- `src/config/gallerySpotlights.ts` exports `GALLERY_BLEEDS` (`side: left | right`, `galleryId`, optional `offsetY`). Desktop (`lg+`): `SectionGallerySpotlight` mode `desktop` — one **column** per margin (`.section-spotlight-rail`), compact cards with surface + caption (`line-clamp-3`), outside `container-x`. Mobile: mode `mobile` — 2-col grid. **Propuestas** and **Certificaciones**: 2 photos (1 left + 1 right). **Resultados** and **Experiencia**: 4 photos (2 left + 2 right, staggered `offsetY`).
+
+### Experience timeline
+- `ExperienceTimeline.tsx`: gold-accent left rail, each card has a `Ver más` (`exec-blue` pill) → `Ver menos` (`gold` pill) toggle that reveals the `extended` bullets list. First card opens by default.
+- Highlight bullets are gold; extended bullets are exec-blue. Do not unify them — the differentiation is intentional.
+
+### Tools & Certifications
+- Both render as **grids of cards**, fully expanded (no real accordion despite the legacy file name). Each card gets a unique accent from `accents[]` in `CategoryIcons.tsx` (exec-blue, gold, exec-green, teal `#3bbfd1`, orange `#e08a4f`).
+- Icon mapping (positional, see `toolIcons` / `certIcons`):
+  - Tools: database · satellite · shield-check · flask (ports/containers) · laptop
+  - Certs: award · trending-up · truck · helmet · check-circle
+  - Cert categories (ES/EN index-aligned): mining/engineering accreditations · technical machinery · regulations/compliance · ISO systems · leadership/change
+- If you add a 6th group to either, add an accent and an icon, otherwise it falls back via modulo and visually duplicates.
+
+### Results
+- ~44 metric cards in `Results.astro`, rendered from `es.results` / `en.results`. All items are **literal extractions** from the Maestro CV — keep that discipline. Uniform `.glass` cards, gold metric typography. Recent clarifications: green KPI label, F30 HR wording, CLOA/SMAS, Centinela vs BHP Spence split, ~28% national contracts (Hualpén), Gabriela Mistral female inclusion.
+
+### CV section
+- `Cv.astro` is title + download + open-in-tab buttons only (no embedded PDF viewer). Public PDF remains `public/documents/cv-yamir-moises-rojo-andrade.pdf` (download as `CV Yamir Moisés Rojo Andrade.pdf`). Legacy `CvViewer.tsx` is dead code.
+- Header nav contains a `CV` item that anchors to `#cv`.
+
+### Accessibility / motion / print
+- Focus visible with gold outline (`globals.css :focus-visible`).
+- Skip link at top.
+- `prefers-reduced-motion` disables marquee, hero motion, counter, accordion height transitions, and hides both backgrounds.
+- `@media print` hides header, marquee, back-to-top, both backgrounds; flattens surfaces; forces black text.
+
+### Profile data
+- `src/config/site.ts` exposes `site.name`, `site.shortName`, `site.title`, `site.email`, `site.phone`, `site.phoneRaw`, `site.whatsappUrl` (pre-filled message), `site.linkedinUrl` (currently `#` placeholder — replace when real URL exists), `site.cvPdf`, `site.ogImage`, `site.birthDate`, and `calcAge()` for dynamic age.
+
+---
+
+## 5. Local development
+
+```bash
+npm install
+npm run dev          # http://localhost:4321
+npm run build        # static build to /dist
+npm run preview
+```
+
+Astro is a watcher; edits in `src/**` hot-reload. CSS overrides require a manual browser hard-reload to bust cache if you tweak `globals.css` selectors.
+
+---
+
+## 6. Known gotchas
+
+1. **Two PDFs, only one ships.** Never expose `CV YAMIR MOISÉS ROJO ANDRADE MAESTRO.pdf` via `public/` or any link.
+2. **Index-aligned bilingual arrays.** `es.education[i]` ↔ `en.education[i]`, same for `propositions`, `results`, `experience`, `certifications`, `tools`, `languages`. If you reorder or insert in one language, mirror immediately in the other.
+3. **Light-theme overrides are class-name-bound.** Adding `text-white/30` (or any opacity tier not yet in `globals.css`) without a light override produces low-contrast text in day mode. Audit the override block when introducing new utility classes.
+4. **`data-lang-only` is CSS-driven.** It doesn’t support nested duplicate IDs cleanly — never put two `<section id="x">` siblings (one per language); use spans inside.
+5. **Accordion file naming is stale.** `ToolsAccordion.tsx` and `CertificationAccordion.tsx` are now grids — keep the file names to avoid touching imports, or rename and update `Tools.astro` / `Certifications.astro`.
+6. **`motion` is installed but underused.** Don’t add motion to images on scroll — users explicitly asked for static images. Hero portrait fade between photos is OK.
+7. **No real LinkedIn URL.** `site.linkedinUrl === '#'`. The contact card and footer link to `#`. When the URL arrives, change one place (`config/site.ts`).
+8. **Company logos (dual theme).** Light assets: `public/logos/{slug}.png`. Dark assets: `public/logos/dark/{slug}.png` (optional dedicated source in `{ICONOS EMPRESAS}/oscuro/`; otherwise aggressive transparency fallback from light). Config: `src` + optional `srcDark` in `companyLogos.ts` / `institutionLogos.ts`; `getCompanyLogo` / `getInstitutionLogo` default `srcDark` to `/logos/dark/{slug}.png`. Resolution: `src/lib/logoSrc.ts` + `LogoPlaque` (`useTheme`) for marquee/timeline; Formación uses dual `<img>` + `.logo-theme-light-only` / `.logo-theme-dark-only` CSS. Plaques use transparent glass in both themes (no cream fill in dark). Process via `npm run process:logos` + `scripts/process-company-logos.mjs`. **5 text-only marquee/timeline slugs** (`ati`, `epa`, `puerto-angamos`, `vinara`, `transportes-cinco`) render as `.company-name-chip`. AMSA label: `AMSA · Antofagasta Minerals`.
+9. **Education `status` enum is `'titled' | 'in_progress' | 'completed'`.** `completed` is used **only** for Educación Básica (no “máxima distinción”). Don’t reuse `titled` for it.
+10. **PowerShell environment.** Developer is on Windows; some shell snippets in past sessions used bash. If you run scripts, prefer cross-platform Node-based tools or document the OS assumption.
+
+---
+
+## 7. Recent change log (most recent on top)
+
+- Dark mode now includes subtle animated lateral formulas via `MathBackground.tsx`; the math overlay is side-only in both themes to protect the central reading area, and `site.email` now points to `yamir@yamirrojo.com`.
+- Light theme redesigned to **paper-first**: `DayBackground.tsx` now renders a static parchment/technical base, `MathBackground.tsx` is denser and visibly ink-led, light surfaces are less opaque, `useTheme.ts` reads the initial theme from `documentElement`, and reduced-motion keeps a static light background instead of hiding it.
+- Dual-theme company/institution logos (`src` / `srcDark`, `public/logos/dark/`, glass plaques); CV section iframe removed; Experiencia spotlights expanded to 4 photos; Certificaciones left spotlight → entrenamiento oficiales Ejército; gallery trimmed to 44 items. hero/profile copy (diplomados, 25+ años minería, acreditaciones); results KPI clarifications; experience enrichment (CLOA/SMAS, puertos, estiba, Gabriela Mistral); education reordered (magíster → diplomados → Ejército → títulos base); Class D = heavy machinery; certifications regrouped (normativas incl. Ley Karin, DS 160 art. 184); tools SAP B1/LT12/LT15/MIGO + ports/containers category; SQM PECRO/sala control removed from tools/experience.
+- Marquee/timeline **text-only company chips** for ATI, EPA, Puerto Angamos, Vinara, Transportes 5 (`CompanyRef.textOnly`, `.company-name-chip` in `globals.css`).
+- Professional gallery: carousel without white stage box; gutter spotlights (`GALLERY_BLEEDS`) in Propuestas/Resultados/Experiencia/Certificaciones.
+- Header: `navShort` desktop nav from `xl`, theme toggle icon-only.
+- Light theme blueprint grid contrast increased (`DayBackground.tsx` minor 0.12 / major 0.18).
+- Light theme overhaul: blueprint technical background in `DayBackground.tsx` (precalculated grid + 10–16 slow markers; no foliage sprites). Dark `StarsBackground` unchanged. `.glow-magna-subtle` replaces neon Magna glow.
+- Company logos: 25 processed PNGs, logo-only marquee, experience timeline logo boxes, `process:logos` script.
+- Header lang/theme toggles replaced by **single compact button each** (icon + current-state word). Avoids overlapping nav.
+- Tools and Certifications converted to **icon-led grid cards with per-block accent colors** (5-color palette). Numeric `01 02` indices removed.
+- Profile photo replaced with `Fto perfil profesional.png` (copied to `public/images/profile.jpg` + `public/og-image.jpg`).
+- Experience: restored `Ver más` collapsible + gold-active / blue-inactive button state; gold-accent rail; first card open by default.
+- Results expanded from 8 → 38 metric cards, all sourced from Maestro PDF.
+- Background removed clouds → deep blue stars; later restored a light theme but with stars-only ocean; later re-replaced with proper daytime background as above.
+- Educación Básica: status `completed`, label `Completado/Completed`, detail simplified — no “máxima distinción”.
+- Sticky positioning removed from diploma image (user request: static images).
+- Stars background tinted deeper blue, density bumped (140–420 stars).
+- `Cv.astro` section added; hero `Ver CV` CTA now anchors to `#cv`. Modal viewer removed from runtime.
+
+---
+
+## 8. Divergences from `PLAN-PORTAFOLIO-YAMIR-ROJO-ANDRADE.md`
+
+The plan is informative, **not authoritative** for the current code. Notable departures:
+
+| Plan said | Current state |
+|-----------|---------------|
+| Three dots under hero portrait | Single `Cambiar foto` button with `n / 3` indicator |
+| Header CTAs `Ver CV` + `Descargar CV` + LinkedIn placeholder + Disponibilidad pill | Header has no CV buttons / no availability pill — CV is a dedicated section; availability badge lives in Hero only |
+| CV modal/drawer viewer | `#cv` section: title + download/open buttons only (no iframe) |
+| Tools/Certifications as **accordions by category** | Grids with all content visible, icon + accent per card |
+| Experience “all collapsed at load” | First card open by default, the rest collapsible via `Ver más` |
+| `bg-slate-50` + light sections sprinkled across the site | Sections are transparent over a single global background (stars or daytime canvas) |
+| Toggle ES \| EN | Toggle with full words `Español` / `Inglés` (or `Spanish` / `English` in EN context) |
+| No theme toggle | Two themes (dark / light) with toggle showing `Oscuro` / `Claro` |
+| Logos placeholder list of 24 companies | 27 processed PNG logos + 5 text-only name chips in marquee/timeline |
+
+When in doubt about UX intent, current code wins over the plan unless the user re-states a preference.
+
+---
+
+## 9. Pending / suggested work (none requested yet, but obvious next steps)
+
+- Plug a real LinkedIn URL into `site.linkedinUrl` and update both Contact card label and Footer (no other change needed).
+- Decide if `Accordion.tsx` and `CvViewer.tsx` should be deleted (currently dead code, no imports). Safe to remove.
+- Optional: add an OG image rendered specifically for sharing (1200×630) instead of reusing `profile.jpg`.
+- Optional: add e2e snapshot for both themes + both languages (Playwright) before shipping to `yamirrojo.com`.
+- Deployment scaffold for GitHub Pages (workflow + custom domain CNAME) — not yet present.
+
+---
+
+## 10. Coding conventions
+
+- **Type safety:** keep strict mode; export typed content (`Content`, `Lang`, `AccordionGroup`, etc. from `src/content/types.ts`).
+- **No new dependencies without a reason.** The current bundle is intentionally lean.
+- **Tailwind first.** Component CSS goes into `globals.css` `@layer components`. Avoid scoped `<style>` blocks in `.astro` unless necessary (the only ones are inside React components using inline `<style>` for marquee keyframes — that’s fine).
+- **Color tokens:**
+  - `navy-950 / navy-900` for cards in dark mode
+  - `gold-400 / gold-500 / gold-600` for accents and active states
+  - `exec-blue` for index-style or secondary highlight accents
+  - `exec-green` for availability / “in progress” status
+  - `#3bbfd1` (teal) and `#e08a4f` (orange) as part of the 5-color block-identity palette for Tools/Certs
+- **Don’t introduce dark-mode-only utilities** without their `html[data-theme="light"]` override.
+- **Spanish first; English mirrors it.** Translation is faithful, not marketed.
+- **Never invent facts.** Cross-check the Maestro PDF before adding any company, metric, year, or recognition.
+
+---
+
+## 11. Useful one-liners
+
+```bash
+# Re-extract Maestro PDF text (Windows, Python 3)
+python -c "import sys, io; sys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8'); from pypdf import PdfReader; r=PdfReader('CV YAMIR MOISÉS ROJO ANDRADE MAESTRO.pdf'); [print('===PAGE',i+1,'==='),print(p.extract_text()) for i,p in enumerate(r.pages)]" > maestro.txt
+```
+
+```bash
+# Verify dev server is up
+curl -sS -o NUL -w "HTTP %{http_code}\n" http://localhost:4321/
+```
+
+---
+
+End of context. Update this file when the architecture or conventions shift; otherwise leave it alone so future agents stay aligned.

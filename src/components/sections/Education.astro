@@ -1,0 +1,148 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import { getInstitutionLogo } from '../../config/institutionLogos';
+import SectionTitle from '../SectionTitle.astro';
+import { EducationRichText } from '../react/EducationRichText';
+---
+<section id="formacion" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.educationEyebrow}
+      eyebrowEn={en.ui.sections.educationEyebrow}
+      titleEs={es.ui.sections.educationTitle}
+      titleEn={en.ui.sections.educationTitle}
+    />
+
+    <div class="mt-10 grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-12 items-start">
+      <figure class="relative rounded-2xl overflow-hidden border border-white/10 surface">
+        <div class="doc-photo-label absolute left-4 bottom-4 z-10">
+          <span class="doc-photo-label-eyebrow">
+            <span data-lang-only="es">{es.reader.photoLabels.education.eyebrow}</span>
+            <span data-lang-only="en">{en.reader.photoLabels.education.eyebrow}</span>
+          </span>
+          <span class="doc-photo-label-detail">
+            <span data-lang-only="es">{es.reader.photoLabels.education.detail}</span>
+            <span data-lang-only="en">{en.reader.photoLabels.education.detail}</span>
+          </span>
+        </div>
+        <img
+          src="/images/portfolio/diploma-distincion-2026.jpg"
+          alt="Yamir Moisés Rojo Andrade recibiendo diploma — Santiago 2026"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-full object-cover aspect-[4/3]"
+        />
+      </figure>
+
+      <div class="grid gap-3">
+        {es.education.map((edu, i) => (
+          <article class={`surface surface-hover rounded-2xl p-5 ${edu.recognition || edu.recognitionDetail ? 'featured-program-card border border-gold-600/35' : ''}`}>
+            <div class="flex items-start gap-4">
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <h3 class="text-base md:text-lg font-bold text-white leading-tight">
+                    <span data-lang-only="es">{edu.title}</span>
+                    <span data-lang-only="en">{en.education[i].title}</span>
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    {edu.status === 'titled' && (
+                      <span class="px-2 py-0.5 rounded-full bg-exec-blue/15 text-exec-blue text-[10px] font-semibold uppercase tracking-wider border border-exec-blue/30">
+                        <span data-lang-only="es">{es.ui.labels.titled}</span>
+                        <span data-lang-only="en">{en.ui.labels.titled}</span>
+                      </span>
+                    )}
+                    {edu.status === 'in_progress' && (
+                      <span class="px-2 py-0.5 rounded-full bg-exec-green/15 text-exec-green text-[10px] font-semibold uppercase tracking-wider border border-exec-green/30">
+                        <span data-lang-only="es">{es.ui.labels.inProgress}</span>
+                        <span data-lang-only="en">{en.ui.labels.inProgress}</span>
+                      </span>
+                    )}
+                    {edu.status === 'completed' && (
+                      <span class="px-2 py-0.5 rounded-full bg-white/10 text-white/85 text-[10px] font-semibold uppercase tracking-wider border border-white/20">
+                        <span data-lang-only="es">{es.ui.labels.completed}</span>
+                        <span data-lang-only="en">{en.ui.labels.completed}</span>
+                      </span>
+                    )}
+                    {edu.magna && (
+                      <span class="px-2 py-0.5 rounded-full bg-gold-600/20 text-gold-400 text-[10px] font-semibold uppercase tracking-wider border border-gold-600/40 glow-magna-subtle">
+                        {es.ui.labels.magna}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <p class="mt-1 text-sm text-gold-400 font-semibold">
+                  <span data-lang-only="es">{edu.institution}</span>
+                  <span data-lang-only="en">{en.education[i].institution}</span>
+                  {edu.period && <span class="text-white/50 font-normal"> · {edu.period}</span>}
+                </p>
+                {edu.detail && (
+                  <p class="mt-2 text-sm text-body leading-relaxed">
+                    <span data-lang-only="es">
+                      <EducationRichText client:visible text={edu.detail} lang="es" />
+                    </span>
+                    <span data-lang-only="en">
+                      <EducationRichText client:visible text={en.education[i].detail ?? ''} lang="en" />
+                    </span>
+                  </p>
+                )}
+                {edu.recognition && (
+                  <div class="mt-4 p-4 rounded-xl border border-gold-600/40 bg-gold-600/10 recognition-badge">
+                    <p class="text-xs uppercase tracking-[0.2em] text-gold-400 font-semibold mb-1">
+                      <span data-lang-only="es">Reconocimiento académico</span>
+                      <span data-lang-only="en">Academic recognition</span>
+                    </p>
+                    <p class="text-sm md:text-base font-semibold text-white leading-snug">
+                      <span data-lang-only="es">
+                        <EducationRichText client:visible text={edu.recognition} lang="es" />
+                      </span>
+                      <span data-lang-only="en">
+                        <EducationRichText client:visible text={en.education[i].recognition ?? ''} lang="en" />
+                      </span>
+                    </p>
+                    {(edu.recognitionDetail || en.education[i].recognitionDetail) && (
+                      <p class="mt-2 text-sm text-body leading-relaxed">
+                        <span data-lang-only="es">
+                          <EducationRichText client:visible text={edu.recognitionDetail ?? ''} lang="es" />
+                        </span>
+                        <span data-lang-only="en">
+                          <EducationRichText client:visible text={en.education[i].recognitionDetail ?? ''} lang="en" />
+                        </span>
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+              {edu.logo && (() => {
+                const inst = getInstitutionLogo(edu.logo);
+                return (
+                  <span
+                    class={`logo-plaque logo-plaque-education logo-plaque-education-${edu.logo} shrink-0 ${
+                      inst.wide ? 'education-institution-logo-panel-wide' : ''
+                    } ${inst.shield ? 'education-institution-logo-panel-shield' : ''}`}
+                  >
+                    <img
+                      src={inst.src}
+                      alt={inst.label}
+                      loading="lazy"
+                      decoding="async"
+                      class="logo-plaque-img education-institution-logo-img logo-theme-light-only"
+                    />
+                    <img
+                      src={inst.srcDark}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                      class="logo-plaque-img education-institution-logo-img logo-theme-dark-only"
+                    />
+                  </span>
+                );
+              })()}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

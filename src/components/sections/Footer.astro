@@ -1,0 +1,40 @@
+---
+import { site } from '../../config/site';
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+const year = new Date().getFullYear();
+---
+<footer class="relative text-white/70 border-t border-white/10">
+  <div class="container-x py-10 grid md:grid-cols-[1fr_auto] gap-6 items-start">
+    <div class="space-y-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 rounded-md bg-gold-600 text-navy-950 items-center justify-center font-bold text-xs">YR</span>
+        <span class="text-white font-semibold">{site.name}</span>
+      </div>
+      <p class="text-sm max-w-xl">
+        <span data-lang-only="es">Gerente de Operaciones, Logística y Supply Chain. Antofagasta, Chile.</span>
+        <span data-lang-only="en">Head of Operations, Logistics & Supply Chain. Antofagasta, Chile.</span>
+      </p>
+      <p class="text-xs uppercase tracking-[0.2em] text-white/40 pt-2">
+        <span data-lang-only="es">{es.ui.footer.keywordsLabel}</span>
+        <span data-lang-only="en">{en.ui.footer.keywordsLabel}</span>
+      </p>
+      <p class="text-xs text-white/45 leading-relaxed max-w-3xl">
+        {site.keywords.join(' · ')}
+      </p>
+    </div>
+    <div class="text-xs text-white/55 space-y-1 md:text-right">
+      <p>© {year} {site.name}</p>
+      <p>
+        <span data-lang-only="es">{es.ui.footer.rights}</span>
+        <span data-lang-only="en">{en.ui.footer.rights}</span>
+      </p>
+      <p class="pt-1">
+        <a href={`mailto:${site.email}`} class="hover:text-gold-400">{site.email}</a>
+      </p>
+      <p>
+        <a href={`tel:${site.phoneRaw}`} class="hover:text-gold-400">{site.phone}</a>
+      </p>
+    </div>
+  </div>
+</footer>

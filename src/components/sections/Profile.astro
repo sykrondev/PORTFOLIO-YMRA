@@ -1,0 +1,50 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import { calcAge } from '../../config/site';
+import SectionTitle from '../SectionTitle.astro';
+const age = calcAge();
+---
+<section id="perfil" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.profileEyebrow}
+      eyebrowEn={en.ui.sections.profileEyebrow}
+      titleEs={es.ui.sections.profileTitle}
+      titleEn={en.ui.sections.profileTitle}
+    />
+    <div class="mt-8 grid md:grid-cols-[1.4fr_1fr] gap-10 items-start">
+      <div class="space-y-4 text-body leading-relaxed">
+        <div data-lang-only="es" class="space-y-4">
+          {es.profile.map(p => <p>{p}</p>)}
+        </div>
+        <div data-lang-only="en" class="space-y-4">
+          {en.profile.map(p => <p>{p}</p>)}
+        </div>
+        <p class="text-xs uppercase tracking-[0.18em] text-muted pt-2">
+          <span data-lang-only="es">{es.ui.labels.based} · {es.ui.labels.born} · {age} {es.ui.labels.yearsOld}</span>
+          <span data-lang-only="en">{en.ui.labels.based} · {en.ui.labels.born} · {age} {en.ui.labels.yearsOld}</span>
+        </p>
+      </div>
+      <figure class="relative rounded-2xl overflow-hidden border border-white/10 surface">
+        <div class="doc-photo-label absolute left-4 top-4 z-10">
+          <span class="doc-photo-label-eyebrow">
+            <span data-lang-only="es">{es.reader.photoLabels.profile.eyebrow}</span>
+            <span data-lang-only="en">{en.reader.photoLabels.profile.eyebrow}</span>
+          </span>
+          <span class="doc-photo-label-detail">
+            <span data-lang-only="es">{es.reader.photoLabels.profile.detail}</span>
+            <span data-lang-only="en">{en.reader.photoLabels.profile.detail}</span>
+          </span>
+        </div>
+        <img
+          src="/images/portfolio/oficina-obra.jpg"
+          alt="Yamir Moisés Rojo Andrade revisando documentos en oficina de obra"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-full object-cover aspect-[4/3]"
+        />
+      </figure>
+    </div>
+  </div>
+</section>

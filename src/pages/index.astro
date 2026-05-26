@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Header } from '../components/react/Header';
+import { Hero } from '../components/react/Hero';
+import { BackToTop } from '../components/react/BackToTop';
+import { Background } from '../components/react/Background';
+import Companies from '../components/sections/Companies.astro';
+import Profile from '../components/sections/Profile.astro';
+import Propositions from '../components/sections/Propositions.astro';
+import Results from '../components/sections/Results.astro';
+import Experience from '../components/sections/Experience.astro';
+import Gallery from '../components/sections/Gallery.astro';
+import Education from '../components/sections/Education.astro';
+import DrivingLicenses from '../components/sections/DrivingLicenses.astro';
+import Certifications from '../components/sections/Certifications.astro';
+import Tools from '../components/sections/Tools.astro';
+import Cv from '../components/sections/Cv.astro';
+import Languages from '../components/sections/Languages.astro';
+import Contact from '../components/sections/Contact.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+<BaseLayout>
+  <Background client:load slot="bg" />
+  <Header client:load />
+  <main id="main">
+    <Hero client:load />
+    <Companies />
+    <Profile />
+    <Propositions />
+    <Results />
+    <Experience />
+    <Gallery />
+    <Education />
+    <DrivingLicenses />
+    <Certifications />
+    <Tools />
+    <Cv />
+    <Languages />
+    <Contact />
+  </main>
+  <Footer />
+  <BackToTop client:visible />
+</BaseLayout>

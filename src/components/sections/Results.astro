@@ -1,0 +1,59 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+---
+<section id="resultados" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.resultsEyebrow}
+      eyebrowEn={en.ui.sections.resultsEyebrow}
+      titleEs={es.ui.sections.resultsTitle}
+      titleEn={en.ui.sections.resultsTitle}
+    />
+    <div class="mt-8">
+      <p class="eyebrow">
+        <span data-lang-only="es">{es.reader.featuredResultsEyebrow}</span>
+        <span data-lang-only="en">{en.reader.featuredResultsEyebrow}</span>
+      </p>
+      <div class="mt-2 max-w-3xl">
+        <h3 class="text-2xl md:text-3xl font-bold tracking-tight">
+          <span data-lang-only="es">{es.reader.featuredResultsTitle}</span>
+          <span data-lang-only="en">{en.reader.featuredResultsTitle}</span>
+        </h3>
+        <p class="mt-3 text-sm md:text-base text-body leading-relaxed">
+          <span data-lang-only="es">{es.reader.featuredResultsIntro}</span>
+          <span data-lang-only="en">{en.reader.featuredResultsIntro}</span>
+        </p>
+      </div>
+      <div class="mt-6 grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+        {es.reader.featuredResults.map((item, i) => (
+          <article class="glass rounded-2xl p-5">
+            <p class="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] font-semibold bg-red-500/15 border border-red-500/40 text-red-400">
+              <span data-lang-only="es">{item.tag}</span>
+              <span data-lang-only="en">{en.reader.featuredResults[i].tag}</span>
+            </p>
+            <p class="mt-4 text-3xl md:text-4xl font-extrabold text-red-400 tracking-tight">
+              {es.results[item.index].metric}
+            </p>
+            <p class="mt-2 text-sm text-white/75 leading-snug">
+              <span data-lang-only="es">{es.results[item.index].label}</span>
+              <span data-lang-only="en">{en.results[item.index].label}</span>
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+    <div class="mt-10 results-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {es.results.map((r, i) => (
+        <article class={`glass rounded-2xl p-5 ${r.featured ? 'result-featured sm:col-span-2 lg:col-span-2' : ''}`}>
+          <p class="text-3xl md:text-4xl font-extrabold text-gold-400 tracking-tight">{r.metric}</p>
+          <p class="mt-2 text-sm text-white/75 leading-snug">
+            <span data-lang-only="es">{r.label}</span>
+            <span data-lang-only="en">{en.results[i].label}</span>
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

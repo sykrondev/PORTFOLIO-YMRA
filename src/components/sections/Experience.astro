@@ -1,0 +1,19 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+import { ExperienceTimeline } from '../react/ExperienceTimeline';
+---
+<section id="experiencia" class="section scroll-mt relative grain">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.experienceEyebrow}
+      eyebrowEn={en.ui.sections.experienceEyebrow}
+      titleEs={es.ui.sections.experienceTitle}
+      titleEn={en.ui.sections.experienceTitle}
+    />
+    <div class="mt-10">
+      <ExperienceTimeline client:visible />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+import { ToolsAccordion } from '../react/ToolsAccordion';
+---
+<section id="herramientas" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.toolsEyebrow}
+      eyebrowEn={en.ui.sections.toolsEyebrow}
+      titleEs={es.ui.sections.toolsTitle}
+      titleEn={en.ui.sections.toolsTitle}
+    />
+    <div class="mt-10 max-w-4xl">
+      <ToolsAccordion client:visible />
+    </div>
+  </div>
+</section>

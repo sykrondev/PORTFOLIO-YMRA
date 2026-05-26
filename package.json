@@ -1,0 +1,31 @@
+{
+  "name": "portafolio-yamir-rojo",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "process:logos": "node scripts/process-company-logos.mjs",
+    "process:gallery": "node scripts/process-gallery.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/tailwind": "^5.1.4",
+    "@fontsource/manrope": "^5.1.1",
+    "astro": "^5.1.0",
+    "motion": "^11.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "sharp": "^0.34.5",
+    "typescript": "^5.7.2"
+  }
+}

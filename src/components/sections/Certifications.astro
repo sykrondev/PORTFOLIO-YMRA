@@ -1,0 +1,19 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+import { CertificationAccordion } from '../react/CertificationAccordion';
+---
+<section id="certificaciones" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.certsEyebrow}
+      eyebrowEn={en.ui.sections.certsEyebrow}
+      titleEs={es.ui.sections.certsTitle}
+      titleEn={en.ui.sections.certsTitle}
+    />
+    <div class="mt-10">
+      <CertificationAccordion client:visible />
+    </div>
+  </div>
+</section>

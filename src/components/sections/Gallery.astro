@@ -1,0 +1,21 @@
+---
+import { es } from '../../content/es';
+import { en } from '../../content/en';
+import SectionTitle from '../SectionTitle.astro';
+import { GalleryCarousel } from '../react/GalleryCarousel';
+---
+<section id="galeria" class="section scroll-mt relative">
+  <div class="container-x relative z-10">
+    <SectionTitle
+      eyebrowEs={es.ui.sections.galleryEyebrow}
+      eyebrowEn={en.ui.sections.galleryEyebrow}
+      titleEs={es.ui.sections.galleryTitle}
+      titleEn={en.ui.sections.galleryTitle}
+    />
+    <p class="mt-4 max-w-3xl text-sm text-body leading-relaxed">
+      <span data-lang-only="es">{es.ui.sections.galleryIntro}</span>
+      <span data-lang-only="en">{en.ui.sections.galleryIntro}</span>
+    </p>
+    <GalleryCarousel client:visible />
+  </div>
+</section>
