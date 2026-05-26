@@ -540,7 +540,7 @@ export const es: Content = {
       ],
     },
     {
-      period: 'Formación militar · Titulado con máxima distinción',
+      period: 'Formación militar · Máxima distinción',
       timelineMark: '0',
       role: 'Oficial de Ejército en Ciencias Militares',
       company: 'Ejército de Chile',
