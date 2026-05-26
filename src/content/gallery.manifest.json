@@ -53,17 +53,6 @@
     ]
   },
   {
-    "id": "entrenamiento-militar",
-    "src": "/images/gallery/entrenamiento-militar.jpg",
-    "thumbSrc": "/images/gallery/thumbs/entrenamiento-militar.jpg",
-    "captionEs": "Entrenamiento militar.",
-    "alt": "Entrenamiento militar.",
-    "categories": [
-      "capacitacion",
-      "militar"
-    ]
-  },
-  {
     "id": "entrenamiento-oficiales-de-ejercito-de-chile",
     "src": "/images/gallery/entrenamiento-oficiales-de-ejercito-de-chile.jpg",
     "thumbSrc": "/images/gallery/thumbs/entrenamiento-oficiales-de-ejercito-de-chile.jpg",
@@ -71,6 +60,16 @@
     "alt": "Entrenamiento oficiales de Ejército de Chile",
     "categories": [
       "capacitacion",
+      "militar"
+    ]
+  },
+  {
+    "id": "ejercito",
+    "src": "/images/gallery/ejercito.jpg",
+    "thumbSrc": "/images/gallery/thumbs/ejercito.jpg",
+    "captionEs": "Ejercito",
+    "alt": "Ejercito",
+    "categories": [
       "militar"
     ]
   },
@@ -477,17 +476,6 @@
     ]
   },
   {
-    "id": "simulacro-cruzado-empresas-del-norte-abastecimiento-de-combustible-enex-s-a-industrial-mejillones",
-    "src": "/images/gallery/simulacro-cruzado-empresas-del-norte-abastecimiento-de-combustible-enex-s-a-industrial-mejillones.jpg",
-    "thumbSrc": "/images/gallery/thumbs/simulacro-cruzado-empresas-del-norte-abastecimiento-de-combustible-enex-s-a-industrial-mejillones.jpg",
-    "captionEs": "Simulacro Cruzado empresas Del norte abastecimiento de combustible Enex S.A industrial Mejillones",
-    "alt": "Simulacro Cruzado empresas Del norte abastecimiento de combustible Enex S.A industrial Mejillones",
-    "categories": [
-      "seguridad",
-      "operaciones"
-    ]
-  },
-  {
     "id": "simulucro-masivo-cia-bomberos-de-mejillones-se-acido-sulfurico-cruce-de-aprendizaje-para-la-administracion-de-contratos-",
     "src": "/images/gallery/simulucro-masivo-cia-bomberos-de-mejillones-se-acido-sulfurico-cruce-de-aprendizaje-para-la-administracion-de-contratos-.jpg",
     "thumbSrc": "/images/gallery/thumbs/simulucro-masivo-cia-bomberos-de-mejillones-se-acido-sulfurico-cruce-de-aprendizaje-para-la-administracion-de-contratos-.jpg",
@@ -495,27 +483,6 @@
     "alt": "Simulucro Masivo CIA Bomberos de Mejillónes se Acido Sulfúrico , Cruce de aprendizaje para la Administración de contratos incidentes en mineria",
     "categories": [
       "seguridad"
-    ]
-  },
-  {
-    "id": "caravana-a-campo-de-tiro",
-    "src": "/images/gallery/caravana-a-campo-de-tiro.jpg",
-    "thumbSrc": "/images/gallery/thumbs/caravana-a-campo-de-tiro.jpg",
-    "captionEs": "Caravana a campo de tiro",
-    "alt": "Caravana a campo de tiro",
-    "categories": [
-      "capacitacion",
-      "militar"
-    ]
-  },
-  {
-    "id": "traje-oficial-de-ejercito",
-    "src": "/images/gallery/traje-oficial-de-ejercito.jpg",
-    "thumbSrc": "/images/gallery/thumbs/traje-oficial-de-ejercito.jpg",
-    "captionEs": "Traje oficial de Ejército",
-    "alt": "Traje oficial de Ejército",
-    "categories": [
-      "militar"
     ]
   }
 ]
