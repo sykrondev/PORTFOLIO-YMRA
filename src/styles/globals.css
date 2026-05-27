@@ -13,13 +13,17 @@
     scroll-behavior: smooth;
     font-family: 'Manrope', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #030615;
+    background:
+      radial-gradient(circle at 22% 28%, rgba(60, 115, 220, 0.52), transparent 52%),
+      radial-gradient(circle at 85% 78%, rgba(40, 85, 175, 0.44), transparent 48%),
+      linear-gradient(180deg, #122e6a 0%, #1a3f80 48%, #0d2250 100%);
     color: #e7ebf3;
   }
   body {
     background: transparent;
     color: #e7ebf3;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
   }
   h1, h2, h3, h4 {
@@ -755,8 +759,8 @@ html:not([data-lang="en"]) [data-lang-only="en"] { display: none !important; }
 }
 @media (max-width: 767px) {
   #stars-bg, #clouds-bg, #day-bg, #math-bg {
-    top: -90px;
-    bottom: -90px;
+    top: -210px;
+    bottom: -210px;
     contain: layout size style;
   }
 }
@@ -781,6 +785,12 @@ html:not([data-lang="en"]) [data-lang-only="en"] { display: none !important; }
 
 html[data-theme="dark"] #math-bg {
   opacity: 0.72;
+}
+html[data-theme="dark"] #stars-bg {
+  background:
+    radial-gradient(circle at 22% 28%, rgba(60, 115, 220, 0.52), transparent 52%),
+    radial-gradient(circle at 85% 78%, rgba(40, 85, 175, 0.44), transparent 48%),
+    linear-gradient(180deg, #122e6a 0%, #1a3f80 48%, #0d2250 100%);
 }
 html[data-theme="dark"] #math-bg canvas {
   opacity: 0.82;

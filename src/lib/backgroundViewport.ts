@@ -4,7 +4,7 @@ export interface BackgroundViewport {
   isMobile: boolean;
 }
 
-const MOBILE_OVERSCAN = 180;
+const MOBILE_OVERSCAN = 420;
 
 export function getBackgroundViewport(previous?: BackgroundViewport | null): BackgroundViewport {
   const width = Math.ceil(window.innerWidth);
