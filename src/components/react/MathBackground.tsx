@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { applyCanvasViewport, getBackgroundViewport, type BackgroundViewport } from '../../lib/backgroundViewport';
 
 // Math / logistics expressions relevant to the portfolio
 const EXPRS = [
@@ -262,12 +263,21 @@ export function MathBackground({ variant = 'light' }: Props) {
     let raf   = 0;
     let lastTick = performance.now();
     let visible = !document.hidden;
+    let viewport: BackgroundViewport | null = null;
 
     const resize = () => {
-      canvas.width        = Math.floor(window.innerWidth  * dpr);
-      canvas.height       = Math.floor(window.innerHeight * dpr);
-      canvas.style.width  = window.innerWidth  + 'px';
-      canvas.style.height = window.innerHeight + 'px';
+      const nextViewport = getBackgroundViewport(viewport);
+      if (
+        viewport &&
+        viewport.width === nextViewport.width &&
+        viewport.height === nextViewport.height
+      ) {
+        return false;
+      }
+
+      viewport = nextViewport;
+      applyCanvasViewport(canvas, viewport, dpr);
+      return true;
     };
 
     const initSlots = () => {
@@ -382,7 +392,7 @@ export function MathBackground({ variant = 'light' }: Props) {
     initSlots();
 
     const onResize = () => {
-      resize();
+      if (!resize()) return;
       initSlots();
       lastTick = performance.now();
       drawFrame();

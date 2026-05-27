@@ -753,6 +753,13 @@ html:not([data-lang="en"]) [data-lang-only="en"] { display: none !important; }
   pointer-events: none;
   contain: strict;
 }
+@media (max-width: 767px) {
+  #stars-bg, #clouds-bg, #day-bg, #math-bg {
+    top: -90px;
+    bottom: -90px;
+    contain: layout size style;
+  }
+}
 #stars-bg,
 #day-bg {
   z-index: 0;

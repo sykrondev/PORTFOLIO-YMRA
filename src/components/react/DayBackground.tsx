@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { applyCanvasViewport, getBackgroundViewport, type BackgroundViewport } from '../../lib/backgroundViewport';
 
 const TECH_LINES = [
   'OTIF / ETA / KPI',
@@ -169,6 +170,7 @@ export function DayBackground() {
     if (!ctx) return;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 1.25);
+    let viewport: BackgroundViewport | null = null;
 
     const drawScene = () => {
       const width = canvas.width / dpr;
@@ -184,10 +186,17 @@ export function DayBackground() {
     };
 
     const resize = () => {
-      canvas.width = Math.floor(window.innerWidth * dpr);
-      canvas.height = Math.floor(window.innerHeight * dpr);
-      canvas.style.width = `${window.innerWidth}px`;
-      canvas.style.height = `${window.innerHeight}px`;
+      const nextViewport = getBackgroundViewport(viewport);
+      if (
+        viewport &&
+        viewport.width === nextViewport.width &&
+        viewport.height === nextViewport.height
+      ) {
+        return;
+      }
+
+      viewport = nextViewport;
+      applyCanvasViewport(canvas, viewport, dpr);
       drawScene();
     };
 

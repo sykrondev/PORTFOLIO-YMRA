@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { applyCanvasViewport, getBackgroundViewport, type BackgroundViewport } from '../../lib/backgroundViewport';
 
 interface Star {
   x: number;
@@ -41,15 +42,23 @@ export function StarsBackground({ variant = 'dark' }: Props) {
     let shooters: Shooting[] = [];
     let raf = 0;
     let lastShoot = performance.now();
+    let viewport: BackgroundViewport | null = null;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     const resize = () => {
-      canvas.width = Math.floor(window.innerWidth * dpr);
-      canvas.height = Math.floor(window.innerHeight * dpr);
-      canvas.style.width = window.innerWidth + 'px';
-      canvas.style.height = window.innerHeight + 'px';
-      const density = (window.innerWidth * window.innerHeight) / 2800;
+      const nextViewport = getBackgroundViewport(viewport);
+      if (
+        viewport &&
+        viewport.width === nextViewport.width &&
+        viewport.height === nextViewport.height
+      ) {
+        return;
+      }
+
+      viewport = nextViewport;
+      applyCanvasViewport(canvas, viewport, dpr);
+      const density = (viewport.width * viewport.height) / 2800;
       const count = Math.min(800, Math.max(300, Math.floor(density)));
       stars = Array.from({ length: count }, () => {
         const angle = Math.random() * Math.PI * 2;
