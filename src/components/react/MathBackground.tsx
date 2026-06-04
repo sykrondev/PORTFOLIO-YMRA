@@ -257,7 +257,6 @@ export function MathBackground({ variant = 'light' }: Props) {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const dpr  = Math.min(window.devicePixelRatio || 1, MAX_DPR);
     let slots: Slot[] = [];
     let raf   = 0;
@@ -285,7 +284,7 @@ export function MathBackground({ variant = 'light' }: Props) {
       const h = canvas.height / dpr;
       const count = getSlotCount(w);
       slots = Array.from({ length: count }, (_, i) =>
-        newSlot(w, h, i, i, variant, reduced, reduced ? 0 : i * INITIAL_STAGGER)
+        newSlot(w, h, i, i, variant, false, i * INITIAL_STAGGER)
       );
     };
 
@@ -398,12 +397,8 @@ export function MathBackground({ variant = 'light' }: Props) {
       drawFrame();
     };
 
-    if (reduced) {
-      drawFrame();
-    } else {
-      raf = requestAnimationFrame(draw);
-      document.addEventListener('visibilitychange', onVisibility);
-    }
+    raf = requestAnimationFrame(draw);
+    document.addEventListener('visibilitychange', onVisibility);
 
     window.addEventListener('resize', onResize);
     return () => {

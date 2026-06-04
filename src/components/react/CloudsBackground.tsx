@@ -13,7 +13,6 @@ export function CloudsBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -99,7 +98,7 @@ export function CloudsBackground() {
     };
 
     const draw = (t: number) => {
-      const dt = prefersReduced ? 0 : (t - last) / 16;
+      const dt = (t - last) / 16;
       last = t;
       drawSky();
       for (const c of clouds) {
@@ -110,7 +109,7 @@ export function CloudsBackground() {
         }
         drawCloud(c);
       }
-      if (!prefersReduced) raf = requestAnimationFrame(draw);
+      raf = requestAnimationFrame(draw);
     };
 
     resize();

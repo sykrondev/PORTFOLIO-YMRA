@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { content } from '../../content';
 import { useLang } from '../../lib/useLang';
 import { site, calcAge } from '../../config/site';
@@ -16,7 +16,6 @@ export function Hero() {
   const current = content[lang];
   const t = current.ui;
   const reader = current.reader;
-  const reduce = useReducedMotion();
   const [idx, setIdx] = useState(0);
   const age = calcAge();
 
@@ -30,8 +29,8 @@ export function Hero() {
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={reduce ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
-            className="order-1 lg:order-1"
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="hero-enter-media order-1 lg:order-1"
           >
             <div className="relative mx-auto max-w-sm lg:max-w-none">
 
@@ -47,9 +46,9 @@ export function Hero() {
                     alt={portraitAlt}
                     loading="eager"
                     decoding="async"
-                    initial={reduce ? false : { opacity: 0, scale: 1.02 }}
+                    initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={reduce ? {} : { opacity: 0 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 0.55, ease: 'easeOut' }}
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{
@@ -85,8 +84,8 @@ export function Hero() {
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={reduce ? { duration: 0 } : { duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-            className="order-2 lg:order-2"
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+            className="hero-enter-copy order-2 lg:order-2"
           >
             <span className="hero-availability-pill inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
               <span className="hero-availability-signal" aria-hidden="true" />

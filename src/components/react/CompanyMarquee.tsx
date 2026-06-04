@@ -77,14 +77,10 @@ export function CompanyMarquee({ variant = 'default' }: { variant?: 'default' | 
     lastPointerX: 0,
     lastMoveTime: 0,
     dragVelocity: 0,
-    reducedMotion: false,
     ready: false,
   });
 
   useEffect(() => {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    stateRef.current.reducedMotion = reduced;
-
     let measureTimer = 0;
 
     const applyLoopWidth = (nextWidth: number) => {
@@ -143,7 +139,7 @@ export function CompanyMarquee({ variant = 'default' }: { variant?: 'default' | 
         measure();
       }
 
-      if (el && s.ready && !s.dragging && !s.reducedMotion && s.loopWidth > 0) {
+      if (el && s.ready && !s.dragging && s.loopWidth > 0) {
         s.boostVelocity *= Math.exp(-VELOCITY_DECAY * dt);
         if (Math.abs(s.boostVelocity) < 1) s.boostVelocity = 0;
 
@@ -183,10 +179,8 @@ export function CompanyMarquee({ variant = 'default' }: { variant?: 'default' | 
     s.pointerId = -1;
     rootRef.current?.classList.remove('marquee-grabbing');
 
-    if (!s.reducedMotion) {
-      const maxBoost = s.baseSpeed * MAX_BOOST_MULTIPLIER;
-      s.boostVelocity = Math.max(-maxBoost, Math.min(maxBoost, -s.dragVelocity));
-    }
+    const maxBoost = s.baseSpeed * MAX_BOOST_MULTIPLIER;
+    s.boostVelocity = Math.max(-maxBoost, Math.min(maxBoost, -s.dragVelocity));
 
     if (s.loopWidth > 0) s.offset = wrapOffset(s.offset, s.loopWidth);
   };

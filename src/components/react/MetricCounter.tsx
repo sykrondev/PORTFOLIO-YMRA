@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useReducedMotion } from 'motion/react';
 
 interface Props {
   value: number;
@@ -21,14 +20,8 @@ export function MetricCounter({
   const ref = useRef<HTMLSpanElement>(null);
   const [n, setN] = useState(0);
   const [done, setDone] = useState(false);
-  const reduce = useReducedMotion();
 
   useEffect(() => {
-    if (reduce) {
-      setN(value);
-      setDone(true);
-      return;
-    }
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
@@ -52,7 +45,7 @@ export function MetricCounter({
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [value, duration, reduce, done]);
+  }, [value, duration, done]);
 
   return (
     <span ref={ref} className={className}>

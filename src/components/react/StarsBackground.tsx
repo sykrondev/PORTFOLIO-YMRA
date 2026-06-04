@@ -30,9 +30,6 @@ export function StarsBackground({ variant = 'dark' }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
-
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -154,7 +151,8 @@ export function StarsBackground({ variant = 'dark' }: Props) {
 
       // stars
       for (const s of stars) {
-        const a = s.baseA;
+        const pulse = 0.62 + Math.sin(t * s.speed + s.phase) * 0.28 + Math.sin(t * s.speed * 0.37 + s.phase * 1.7) * 0.1;
+        const a = Math.max(0.18, Math.min(1, s.baseA * pulse));
         ctx.beginPath();
         if (s.hue === 42) {
           ctx.fillStyle = `rgba(230, 196, 120, ${a})`;

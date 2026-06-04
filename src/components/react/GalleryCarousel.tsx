@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { content } from '../../content';
 import { useLang } from '../../lib/useLang';
 
@@ -7,7 +7,6 @@ export function GalleryCarousel() {
   const lang = useLang();
   const items = content[lang].gallery;
   const t = content[lang].ui.gallery;
-  const reduce = useReducedMotion();
   const [index, setIndex] = useState(0);
 
   const step = useCallback(
@@ -65,10 +64,10 @@ export function GalleryCarousel() {
                   alt={active.alt}
                   decoding="async"
                   className="gallery-carousel-img"
-                  initial={reduce ? false : { opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={reduce ? undefined : { opacity: 0 }}
-                  transition={{ duration: reduce ? 0 : 0.25 }}
+                  initial={{ opacity: 0, scale: 0.985, x: 14 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.99, x: -10 }}
+                  transition={{ duration: 0.34, ease: 'easeOut' }}
                 />
               </AnimatePresence>
             </div>
