@@ -13,8 +13,8 @@ export const site = {
   linkedinUrl: 'https://www.linkedin.com/in/yamirrojo/',
   location: 'Antofagasta, Chile',
   birthDate: '1982-01-29',
-  cvPdf: '/documents/cv-yamir-moises-rojo-andrade.pdf',
-  cvPdfDownloadName: 'CV Yamir Moisés Rojo Andrade.pdf',
+  cvPdf: '/documents/cv-yamir-moises-rojo-andrade-maestro.pdf',
+  cvPdfDownloadName: 'CV Yamir Moises Rojo Andrade Maestro.pdf',
   ogImage: '/og-image.jpg',
   keywords: [
     'Gerente de Operaciones',
