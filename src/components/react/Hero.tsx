@@ -28,9 +28,9 @@ export function Hero() {
       <div className="container-x relative">
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] gap-10 lg:gap-14 items-center">
           <motion.div
-            initial={reduce ? {} : { opacity: 0, y: 14 }}
-            animate={reduce ? {} : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={reduce ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
             className="order-1 lg:order-1"
           >
             <div className="relative mx-auto max-w-sm lg:max-w-none">
@@ -40,15 +40,15 @@ export function Hero() {
                   <span className="doc-photo-label-eyebrow">{reader.photoLabels.hero[idx].eyebrow}</span>
                   <span className="doc-photo-label-detail">{reader.photoLabels.hero[idx].detail}</span>
                 </div>
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                   <motion.img
                     key={portrait.src}
                     src={portrait.src}
                     alt={portraitAlt}
                     loading="eager"
                     decoding="async"
-                    initial={reduce ? {} : { opacity: 0, scale: 1.02 }}
-                    animate={reduce ? {} : { opacity: 1, scale: 1 }}
+                    initial={reduce ? false : { opacity: 0, scale: 1.02 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={reduce ? {} : { opacity: 0 }}
                     transition={{ duration: 0.55, ease: 'easeOut' }}
                     className="absolute inset-0 w-full h-full object-cover"
@@ -83,9 +83,9 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={reduce ? {} : { opacity: 0, y: 18 }}
-            animate={reduce ? {} : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={reduce ? { duration: 0 } : { duration: 0.7, ease: 'easeOut', delay: 0.1 }}
             className="order-2 lg:order-2"
           >
             <span className="hero-availability-pill inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
